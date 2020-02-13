@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 13 fév. 2020 à 10:47
+-- Généré le :  jeu. 13 fév. 2020 à 11:48
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -25,6 +25,22 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `location`
+--
+
+DROP TABLE IF EXISTS `location`;
+CREATE TABLE IF NOT EXISTS `location` (
+  `id` int(11) NOT NULL,
+  `mangaID` int(11) NOT NULL,
+  `emprunteurID` int(11) NOT NULL,
+  `dateEmprunt` date NOT NULL,
+  `dateRetour` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `manga`
 --
 
@@ -36,6 +52,22 @@ CREATE TABLE IF NOT EXISTS `manga` (
   `tome` int(11) NOT NULL,
   `genre` varchar(255) NOT NULL,
   `dateSortie` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `admin` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
