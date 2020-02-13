@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 13 fév. 2020 à 13:01
+-- Généré le :  jeu. 13 fév. 2020 à 13:35
 -- Version du serveur :  5.7.26
--- Version de PHP :  7.2.18
+-- Version de PHP :  7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `manga++`
+-- Base de données :  `manga`
 --
 
 -- --------------------------------------------------------
@@ -78,8 +78,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `password`, `admin`, `nom`, `prenom`) VALUES
 (3, 'Charles123', 'Y', 'Ranouil', 'Charles'),
 (4, 'Charles123', 'Y', 'Ranouil', 'Charles'),
-(5, 'JL123', 'N', 'Monier', 'Jean Louis'),
-(6, 'JL123', 'N', 'Monier', 'Jean Louis');
+(5, 'JL123', 'N', 'Monnier', 'Jean Louis'),
+(6, 'JL123', 'N', 'Monnier', 'Jean Louis');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
