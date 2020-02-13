@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 13 fév. 2020 à 11:48
+-- Généré le :  jeu. 13 fév. 2020 à 13:01
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `location`;
 CREATE TABLE IF NOT EXISTS `location` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `mangaID` int(11) NOT NULL,
   `emprunteurID` int(11) NOT NULL,
   `dateEmprunt` date NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `location` (
 
 DROP TABLE IF EXISTS `manga`;
 CREATE TABLE IF NOT EXISTS `manga` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `auteur` varchar(255) NOT NULL,
   `tome` int(11) NOT NULL,
@@ -63,13 +63,23 @@ CREATE TABLE IF NOT EXISTS `manga` (
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `password` varchar(255) NOT NULL,
   `admin` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `password`, `admin`, `nom`, `prenom`) VALUES
+(3, 'Charles123', 'Y', 'Ranouil', 'Charles'),
+(4, 'Charles123', 'Y', 'Ranouil', 'Charles'),
+(5, 'JL123', 'N', 'Monier', 'Jean Louis'),
+(6, 'JL123', 'N', 'Monier', 'Jean Louis');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
