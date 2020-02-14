@@ -21,7 +21,7 @@
     while($serie = $series->fetch())
     {
       $idSerie = $serie['id'];
-      $countTome = $bdd->query("SELECT COUNT(id) FROM livre WHERE serieID = $idSerie");
+      $countTome = $bdd->query("SELECT COUNT(id) FROM tome WHERE serieID = $idSerie");
       $nbTome = $countTome->fetch()[0]; //nb de tome
       echo "<h3>".$serie['name']."</h3>";
       echo "
@@ -31,7 +31,7 @@
       $i = 1 ;
       while ($i <= $nbTome)
       {
-        $tomeStock = $bdd->query("SELECT stock from livre WHERE tome = $i AND serieID = $idSerie");
+        $tomeStock = $bdd->query("SELECT stock from tome WHERE tome = $i AND serieID = $idSerie");
         if ($tomeStock->fetch()[0] > 0){
           echo "<option value='$i'>". $i ."</option>";
           $i++;

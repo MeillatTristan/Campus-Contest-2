@@ -19,11 +19,11 @@
     }
     $idSerie = $_REQUEST['serie'];
     $tome = $_REQUEST['tome'];
-    $stock = $bdd->query("SELECT stock from livre WHERE tome = $tome AND serieID = $idSerie")->fetch()[0];
+    $stock = $bdd->query("SELECT stock from tome WHERE tome = $tome AND serieID = $idSerie")->fetch()[0];
     if ($stock > 0){
     $updateStock = $stock - 1;
 
-    $updateRequest = "UPDATE livre SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
+    $updateRequest = "UPDATE tome SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
     echo "<p>le tome à bien été loué</p>";
     $bdd->query($updateRequest);
     }
