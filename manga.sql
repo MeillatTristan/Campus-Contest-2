@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 14 fév. 2020 à 09:26
+-- Généré le :  ven. 14 fév. 2020 à 14:20
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -25,45 +25,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `livre`
+-- Structure de la table `locations`
 --
 
-DROP TABLE IF EXISTS `livre`;
-CREATE TABLE IF NOT EXISTS `livre` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tome` int(11) NOT NULL,
-  `stock` int(11) NOT NULL,
-  `serieID` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `serieID` (`serieID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `livre`
---
-
-INSERT INTO `livre` (`id`, `tome`, `stock`, `serieID`) VALUES
-(1, 1, 5, 1),
-(2, 1, 20, 2),
-(3, 2, 25, 2),
-(4, 3, 5, 2),
-(5, 4, 4, 2),
-(6, 5, 0, 2),
-(7, 6, 7, 2);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `location`
---
-
-DROP TABLE IF EXISTS `location`;
-CREATE TABLE IF NOT EXISTS `location` (
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE IF NOT EXISTS `locations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `mangaID` int(11) NOT NULL,
-  `emprunteurID` int(11) NOT NULL,
-  `dateEmprunt` date NOT NULL,
-  `dateRetour` date NOT NULL,
+  `customersID` int(11) NOT NULL,
+  `borrowingDate` date NOT NULL,
+  `returnDate` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -77,8 +48,8 @@ DROP TABLE IF EXISTS `series`;
 CREATE TABLE IF NOT EXISTS `series` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `date_sortie` date NOT NULL,
-  `auteur` varchar(255) NOT NULL,
+  `releaseDate` date NOT NULL,
+  `author` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
@@ -86,9 +57,38 @@ CREATE TABLE IF NOT EXISTS `series` (
 -- Déchargement des données de la table `series`
 --
 
-INSERT INTO `series` (`id`, `name`, `date_sortie`, `auteur`) VALUES
+INSERT INTO `series` (`id`, `name`, `releaseDate`, `author`) VALUES
 (1, 'One Piece', '1997-07-22', 'Eichiro Oda'),
 (2, 'Naruto', '1999-09-20', 'Masashi Kishimoto');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tome`
+--
+
+DROP TABLE IF EXISTS `tome`;
+CREATE TABLE IF NOT EXISTS `tome` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tome` int(11) NOT NULL,
+  `stock` int(11) NOT NULL,
+  `serieID` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `serieID` (`serieID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `tome`
+--
+
+INSERT INTO `tome` (`id`, `tome`, `stock`, `serieID`) VALUES
+(1, 1, 5, 1),
+(2, 1, 20, 2),
+(3, 2, 21, 2),
+(4, 3, 5, 2),
+(5, 4, 4, 2),
+(6, 5, 0, 2),
+(7, 6, 7, 2);
 
 -- --------------------------------------------------------
 
@@ -101,12 +101,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `password` varchar(255) NOT NULL,
   `admin` varchar(255) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `numéro` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

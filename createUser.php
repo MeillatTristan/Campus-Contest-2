@@ -4,7 +4,7 @@
   $firstname = $_REQUEST['user_firstname'];
   $mail = $_REQUEST['user_mail'];
   $phone = $_REQUEST['phone'];
-  $password = $_REQUEST['password'];
+  $password = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
 
   try
   {
