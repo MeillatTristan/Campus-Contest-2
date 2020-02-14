@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 14 fév. 2020 à 08:19
+-- Généré le :  ven. 14 fév. 2020 à 09:26
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `serieID` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `serieID` (`serieID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `livre`
@@ -45,7 +45,11 @@ CREATE TABLE IF NOT EXISTS `livre` (
 INSERT INTO `livre` (`id`, `tome`, `stock`, `serieID`) VALUES
 (1, 1, 5, 1),
 (2, 1, 20, 2),
-(3, 2, 25, 2);
+(3, 2, 25, 2),
+(4, 3, 5, 2),
+(5, 4, 4, 2),
+(6, 5, 0, 2),
+(7, 6, 7, 2);
 
 -- --------------------------------------------------------
 
