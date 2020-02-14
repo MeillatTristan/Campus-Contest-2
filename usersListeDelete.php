@@ -24,13 +24,13 @@ $requete = q('SELECT * FROM users');
         <?php
         foreach (qFetch($requete) as $users){
             echo "<tr>";
-            echo "<td>". $users['nom']."</td>" ;
+            echo "<td>". $users['name']."</td>" ;
             echo "<br>";
-            echo "<td>". $users['prenom']."</td>" ;
+            echo "<td>". $users['fistname']."</td>" ;
             echo "<br>";
             echo "<td>". $users['email']."</td>" ;
             echo "<br>";
-            echo "<td>". $users['numero']."</td>" ;
+            echo "<td>". $users['number']."</td>" ;
             echo "<br>";
             echo "<td>". $users['admin']."</td>" ;
             echo "<br>";

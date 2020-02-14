@@ -16,6 +16,6 @@
     echo "Connexion impossible";
   }
 
-  $bdd->query("INSERT INTO users (nom, prenom, email, numéro, password, admin) VALUES ('$name', '$firstname', '$mail', $phone, '$password', 'n')");
+  $bdd->query("INSERT INTO users (name, fistname, email, number, password, admin) VALUES ('$name', '$firstname', '$mail', $phone, '$password', 'n')");
   header('Location: connexion.php');
 ?>

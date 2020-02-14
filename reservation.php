@@ -24,11 +24,11 @@
     $updateStock = $stock - 1;
 
     $updateRequest = "UPDATE livre SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
-    echo "<p>le tome à bien été loué</p>";
+    echo "<p>Le tome à bien été loué</p>";
     $bdd->query($updateRequest);
     }
     else{
-      "<p>désolé, le tome n'est plus dispo</p>";
+      "<p>Désolé, le tome n'est plus dispo</p>";
     }
   ?>
 
