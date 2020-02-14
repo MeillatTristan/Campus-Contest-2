@@ -20,7 +20,7 @@
     $idSerie = $_REQUEST['serie'];
     $tome = $_REQUEST['tome'];
     $stock = $bdd->query("SELECT stock from livre WHERE tome = $tome AND serieID = $idSerie")->fetch()[0];
-    if (stock > 0){
+    if ($stock > 0){
     $updateStock = $stock - 1;
 
     $updateRequest = "UPDATE livre SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
