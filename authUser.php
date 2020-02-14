@@ -1,13 +1,29 @@
 <?php
-  $mail = $_REQUEST('user_mail');
-  $password = $_REQUEST('password');
+  include "configbdd.php";
 
-  $req = $bdd->prepare('SELECT id, pass FROM membres WHERE pseudo = :pseudo');
+  $email = $_REQUEST["email"];
+  $password = $_REQUEST['password'];
+
+  $req = $bdd->prepare('SELECT id, password FROM users WHERE email = :email');
   $req->execute(array(
-    'pseudo' => $pseudo));
+    'email' => $email));
   $resultat = $req->fetch();
 
-// Comparaison du pass envoyé via le formulaire avec la base
-$isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
+  $isPasswordCorrect = password_verify($password, $resultat['password']);
 
+  if (!$resultat)
+{
+    echo 'Mauvais email ou mot de passe !';
+}
+
+else{
+    if ($isPasswordCorrect) {
+        session_start();
+        $_SESSION['id'] = $resultat['id'];
+        echo 'Vous êtes connecté !';
+    }
+    else {
+        echo 'Mauvais identifiant ou mot de passe !';
+    }
+}
 ?>

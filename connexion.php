@@ -7,12 +7,18 @@
   <title>connexion</title>
 </head>
 <body>
+  <?php
+    session_start();
+    if(isset($_SESSION['id'])){
+      header('Location: index.php');
+    }
+  ?>
   <h2>Connexion</h2>
 
   <form action="authUser.php" method="post">
 
     <label for="mail">Email :</label>
-    <input type="text" id="mail" mail="user_mail">
+    <input type="text" id="mail" name="email">
 
     <label for="password">Mot de Passe (8 caractère minimum):</label>
     <input type="password" id="password" name="password" minlength="8" required>

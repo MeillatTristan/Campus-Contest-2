@@ -7,6 +7,12 @@
   <title>inscription</title>
 </head>
 <body>
+  <?php
+    session_start();
+    if(isset($_SESSION['id'])){
+      header('Location: index.php');
+    }
+  ?>
   <form action="createUser.php" method="post">
 
     <label for="name">Nom :</label>
