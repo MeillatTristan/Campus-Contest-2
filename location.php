@@ -25,16 +25,21 @@
       $nbTome = $countTome->fetch()[0]; //nb de tome
       echo "<h3>".$serie['name']."</h3>";
       echo "
-      <form action='reservation.php'>
-      <select name='tome' size='".$nbTome."' multiple>";
-      // for ($i = 1; $i <= $nbTome; $i++) {
-      //   echo "<option value='tome'>". $i ."</option>";
-      // }
+      <form method='get' action='reservation.php'>
+      <input type='hidden' name='serie' value= '$idSerie'> </input>
+      <select name='tome'>";
       $i = 1 ;
       while ($i <= $nbTome)
       {
-        echo "<option value='tome'>". $i ."</option>";
-        $i++;
+        $tomeStock = $bdd->query("SELECT stock from livre WHERE tome = $i AND serieID = $idSerie");
+        if ($tomeStock->fetch()[0] > 0){
+          echo "<option value='$i'>". $i ."</option>";
+          $i++;
+        }
+        else{
+          echo "<option value='indisponible' disabled='disabled'>". $i ." (indisponible)</option>";
+          $i++;
+        }
       }
       echo "
       </select>
