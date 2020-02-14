@@ -24,14 +24,13 @@
       $countTome = $bdd->query("SELECT COUNT(id) FROM livre WHERE serieID = $idSerie");
       $nbTome = $countTome->fetch()[0]; //nb de tome
       echo "<h3>".$serie['name']."</h3>";
-      echo $nbTome;
       echo "
       <form action='reservation.php'>
       <select name='tome' size='".$nbTome."' multiple>";
       // for ($i = 1; $i <= $nbTome; $i++) {
       //   echo "<option value='tome'>". $i ."</option>";
       // }
-      $i = 1;
+      $i = 1 ;
       while ($i <= $nbTome)
       {
         echo "<option value='tome'>". $i ."</option>";
