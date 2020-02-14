@@ -30,11 +30,11 @@ $requete = q('SELECT * FROM users');
             echo "<br>";
             echo "<td>". $users['email']."</td>" ;
             echo "<br>";
-            echo "<td>". $users['numéro']."</td>" ;
+            echo "<td>". $users['numero']."</td>" ;
             echo "<br>";
             echo "<td>". $users['admin']."</td>" ;
             echo "<br>";
-            echo "<td><a href='liste.php?id=".$users['id']."'>Supprimer</a></td>" ;
+            echo "<td><a href='usersListeDelete.php?id=".$users['id']."'>Supprimer</a></td>" ;
             echo "<td></td>" ;
             echo "</tr>";
         }
