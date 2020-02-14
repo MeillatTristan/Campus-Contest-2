@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Accueil</title>
+  <title>Mon compte</title>
 </head>
 <body>
-<?php include 'header.php' ?>
-<?php
-  $borrowingDate = date("d-m-Y");
-  $returnDate = date('d-m-Y',strtotime('+2 week',strtotime($borrowingDate)));
-
-  echo "$borrowingDate \n $returnDate";
-?>
+  <h2>Mes commandes</h2>
+  <?php
+    session_start();
+    if (isset($_SESSION['id'])){
+      
+    }
+  ?>
 </body>
 </html>

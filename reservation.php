@@ -8,27 +8,27 @@
 </head>
 <body>
   <?php
+    include "header.php";
+    include "configbdd.php";
 
-    try
-    {
-      $bdd = new PDO('mysql:host=localhost;dbname=manga++;charset=utf8', 'root', '');
-    }
-    catch (Exception $e)
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
     $idSerie = $_REQUEST['serie'];
     $tome = $_REQUEST['tome'];
+    $idCustomers = $_SESSION['id'];
+    $borrowingDate = date("Y-m-d");
+    $returnDate = date('Y-m-d',strtotime('+2 week',strtotime($borrowingDate)));
+
     $stock = $bdd->query("SELECT stock from tome WHERE tome = $tome AND serieID = $idSerie")->fetch()[0];
     if ($stock > 0){
-    $updateStock = $stock - 1;
+      $updateStock = $stock - 1;
+      $updateRequest = "UPDATE tome SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
+      $bdd->query($updateRequest);
 
-    $updateRequest = "UPDATE tome SET stock=$updateStock WHERE serieID = $idSerie AND tome = $tome";
-    echo "<p>le tome à bien été loué</p>";
-    $bdd->query($updateRequest);
+      $bdd->query("INSERT INTO locations (tome, customersID, borrowingDate, returnDate,serieID) VALUES ('$tome', '$idCustomers', '$borrowingDate', '$returnDate', '$idSerie')");
+      echo "<p>le tome à bien été loué</p>";
+
     }
     else{
-      "<p>Désolé, le tome n'est plus dispo</p>";
+      "<p>Désolé, le tome n'est plus disponible</p>";
     }
   ?>
 
