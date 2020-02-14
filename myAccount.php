@@ -9,9 +9,14 @@
 <body>
   <h2>Mes commandes</h2>
   <?php
-    session_start();
+    include "header.php";
+    include "configbdd.php";
     if (isset($_SESSION['id'])){
-      
+      $idUsers = $_SESSION['id'];
+      $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
+      while ($location = $locations->fetch()){
+        echo $location['borrowingDate'];
+      }
     }
   ?>
 </body>
