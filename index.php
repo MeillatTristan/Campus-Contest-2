@@ -23,7 +23,9 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="#">Manga ++</a></div>
+				<div class="logo">
+					<img src="images/Logo.PNG" alt="">
+				</div>
 			</header>
 
 		<!-- Main -->
