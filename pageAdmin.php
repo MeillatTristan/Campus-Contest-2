@@ -15,7 +15,8 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="#">N'Gyen Mangas</a></div>
+				<div class="logo"><a href="#">Administration</a></div>
+				<?php include 'header.php' ?></p>
 			</header>
 
 		<!-- Main -->
