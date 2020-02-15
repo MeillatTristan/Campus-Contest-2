@@ -8,5 +8,6 @@
 
   include 'configbdd.php';
   $bdd->query("INSERT INTO users (name, firstname, email, number, password, admin) VALUES ('$name', '$firstname', '$mail', $phone, '$password', 'n')");
-  header('Location: connexion.php');
+  //header('Location: connexion.php');
+  echo("bonjour");
 ?>
