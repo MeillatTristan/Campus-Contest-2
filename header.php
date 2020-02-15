@@ -3,8 +3,8 @@
     session_start();
     if (!isset($_SESSION['id'])){
       ?>
-      <li><a href="connexion.php">connexion</a></li>
-      <li><a href="inscription.php">inscription</a></li>
+      <!-- <li><a href="connexion.php">connexion</a></li> -->
+      <li><a href="creationDeCompte.php">inscription</a></li>
       <?php
     }
     else{
