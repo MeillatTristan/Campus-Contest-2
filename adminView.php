@@ -19,7 +19,7 @@ else{
     }
 
     $requete = $bdd->query('SELECT * FROM users');
-
+    echo "Supprim"
     echo "
     <table>
         <thead>
