@@ -33,17 +33,13 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-
-						<div class="image fit flush">
-							<img src="images/pic02.jpg" alt="" />
-						</div>
 						<header class="special">
-							<h2>Fringilla Fermentum Tellus</h2>
-							<p>vehicula urna sed justo bibendum</p>
+							<h2>LOUEZ VOS MANGA</h2>
+							<p>et à petit prix !</p>
 						</header>
-						<div class="content">
-              <?php include 'connexion.php'?>
-              <?php include 'header.php' ?>
+						<div class="button">
+              				<p><?php include 'connexion.php'?></p>
+              				<p><?php include 'header.php' ?></p>
 						</div>
 					</section>
 
