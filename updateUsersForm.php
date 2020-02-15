@@ -12,8 +12,8 @@
   include 'configbdd.php';
   $idUsersModif = $_REQUEST['idMaj'];
   $admin = $bdd->query("SELECT admin FROM users WHERE id = ".$_SESSION['id'])->fetch()[0];
-  if(isset($_SESSION['id'])){
-    if (($_SESSION['id'] == $idUsersModif || $admin = 'y'))
+  if(!isset($_SESSION['id'])){
+    if (($_SESSION['id'] != $idUsersModif && $admin != 'y'))
       echo "veuillez vous connectez pour accéder à cette page";
     }
   else{
