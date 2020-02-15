@@ -25,74 +25,15 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-
-						<div class="image fit flush">
-							<img src="images/pic02.jpg" alt="" />
-						</div>
-						<header class="special">
-							<h2>Fringilla Fermentum Tellus</h2>
-							<p>vehicula urna sed justo bibendum</p>
-						</header>
-						<div class="content">
-							<p>Inserer l'interface de connexion ici</p>
-							<p>Inserer l'interface de connexion ici</p>
-						</div>
 					</section>
 
 				<!-- Two -->
 					<section id="two" class="wrapper style2">
-						<header>
-							<h2>Nouveautés</h2>
-							<p>Une série qui monte</p>
-						</header>
-						<div class="content">
-							<div class="gallery">
-								<div>
-									<div class="image fit flush">
-										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
-									</div>
-								</div>
-								<div>
-									<div class="image fit flush">
-										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
-									</div>
-								</div>
-								<div>
-									<div class="image fit flush">
-										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
-									</div>
-								</div>
-								<div>
-									<div class="image fit flush">
-										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
-									</div>
-								</div>
-							</div>
-						</div>
 					</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper">
-						<div class="spotlight">
-							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
-							<div class="inner">
-								<h3>World's End Harem</h3>
-							</div>
-						</div>
-						<div class="spotlight alt">
-							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
-							<div  class="inner">
-								<h3>One Piece</h3>
-							</div>
-						</div>
-						<div class="spotlight">
-							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
-							<div class="inner">
-								<h3>One Piece</h3>
-							</div>
-						</div>
 					</section>
-
 				</div>
 			</section>
 
@@ -110,13 +51,5 @@
 					&copy; Untitled. All rights reserved. Images <a href="https://unsplash.com">Unsplash</a> Design <a href="https://templated.co">TEMPLATED</a>
 				</div>
 			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
