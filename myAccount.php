@@ -14,8 +14,35 @@
     if (isset($_SESSION['id'])){
       $idUsers = $_SESSION['id'];
       $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
+      echo "<h3>Commandes en cours</h3>";
+      echo "<table>";
+      echo "<td>Série </td>";
+      echo "<td>Tome </td>";
+      echo "<td>Date d'emprunt </td>";
+      echo "<td>Date de retour </td>";
       while ($location = $locations->fetch()){
-        echo $location['borrowingDate'];
+        $currentDate = date("Y-m-d");
+        if ($location['returnBool'] == 'n'){
+          $idLocationSerie = $location['serieID'];
+          $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
+          $tome = $location['tome'];
+          $borrowingDate = $location['borrowingDate'];
+          $returnDate = $location['returnDate'];
+          ?>
+            <tr>
+              <td><?php echo $nameSerie?> </td>
+              <td><?php echo $tome?> </td>
+              <td><?php echo $borrowingDate?> </td>
+              <td><?php echo $returnDate?> </td>
+              <?php
+              if (date("Y-m-d") > $returnDate){
+                echo "<td> Vous devez ramener votre livre !</td>";
+              }
+              ?>
+            </tr>
+          </table>
+          <?php
+        }
       }
     }
   ?>
