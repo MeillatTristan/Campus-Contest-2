@@ -42,7 +42,7 @@
 							<p>vehicula urna sed justo bibendum</p>
 						</header>
 						<div class="content">
-              <?php include 'connexion.php'?>
+              <?php //include 'connexion.php'?>
               <?php include 'header.php' ?>
 						</div>
 					</section>

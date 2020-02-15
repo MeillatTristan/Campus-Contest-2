@@ -19,7 +19,7 @@ else{
     }
 
     $requete = $bdd->query('SELECT * FROM users');
-    echo "Supprim"
+    echo "Supprimer un utilisateur";
     echo "
     <table>
         <thead>
@@ -47,7 +47,7 @@ else{
                 echo "<td>". $users['admin']."</td>" ;
                 echo "<br>";
                 echo "<td><a href='usersListeDelete.php?idDel=".$users['id']."'>Supprimer</a></td>" ;
-                echo "<td></td>" ;
+                echo "<td><a href='updateUsersForm.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
                 echo "</tr>";
             }
         }
