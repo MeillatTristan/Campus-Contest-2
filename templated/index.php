@@ -13,6 +13,7 @@
 		<title>manga++</title>
 	</head>
 	<body>
+		<?php include 'header.php' ?>
 		<?php
   		  $borrowingDate = date("d-m-Y");
   		  $returnDate = date('d-m-Y',strtotime('+2 week',strtotime($borrowingDate)));
@@ -40,8 +41,7 @@
 							<p>vehicula urna sed justo bibendum</p>
 						</header>
 						<div class="content">
-              <?php include 'connexion.php'?>
-              <?php include 'header.php' ?>
+							<?php include 'header.php' ?>
 						</div>
 					</section>
 

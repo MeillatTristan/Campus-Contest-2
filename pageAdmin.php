@@ -6,23 +6,16 @@
 -->
 <html>
 	<head>
+		<title>N'Gyen Mangas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<title>manga++</title>
 	</head>
 	<body>
-		<?php
-  		  $borrowingDate = date("d-m-Y");
-  		  $returnDate = date('d-m-Y',strtotime('+2 week',strtotime($borrowingDate)));
-
-  		  echo "$borrowingDate \n $returnDate";
-		?>
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="#">Manga ++</a></div>
+				<div class="logo"><a href="#">N'Gyen Mangas</a></div>
 			</header>
 
 		<!-- Main -->
@@ -40,8 +33,8 @@
 							<p>vehicula urna sed justo bibendum</p>
 						</header>
 						<div class="content">
-              <?php include 'connexion.php'?>
-              <?php include 'header.php' ?>
+							<p>Inserer l'interface de connexion ici</p>
+							<p>Inserer l'interface de connexion ici</p>
 						</div>
 					</section>
 
