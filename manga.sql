@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 14 fév. 2020 à 14:20
+-- Généré le :  sam. 15 fév. 2020 à 11:20
 -- Version du serveur :  5.7.26
 -- Version de PHP :  7.2.18
 
@@ -31,12 +31,23 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `locations`;
 CREATE TABLE IF NOT EXISTS `locations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mangaID` int(11) NOT NULL,
+  `tome` int(11) NOT NULL,
   `customersID` int(11) NOT NULL,
   `borrowingDate` date NOT NULL,
   `returnDate` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `serieID` int(11) NOT NULL,
+  `returnBool` varchar(1) NOT NULL DEFAULT 'n',
+  PRIMARY KEY (`id`),
+  KEY `serieID` (`serieID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `locations`
+--
+
+INSERT INTO `locations` (`id`, `tome`, `customersID`, `borrowingDate`, `returnDate`, `serieID`, `returnBool`) VALUES
+(1, 2, 11, '2020-02-14', '2020-01-16', 2, 'n'),
+(2, 4, 14, '2020-02-15', '2020-02-29', 2, 'n');
 
 -- --------------------------------------------------------
 
@@ -84,9 +95,9 @@ CREATE TABLE IF NOT EXISTS `tome` (
 INSERT INTO `tome` (`id`, `tome`, `stock`, `serieID`) VALUES
 (1, 1, 5, 1),
 (2, 1, 20, 2),
-(3, 2, 21, 2),
+(3, 2, 12, 2),
 (4, 3, 5, 2),
-(5, 4, 4, 2),
+(5, 4, 3, 2),
 (6, 5, 0, 2),
 (7, 6, 7, 2);
 
@@ -106,7 +117,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `number` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `password`, `admin`, `name`, `firstname`, `email`, `number`) VALUES
+(11, '$2y$10$RLW.tbhS8678XBpmgXSKcegwh0jzC1/ecw7OZVD1WtNl5GmfqYjlu', 'y', 'meillat', 'tristan', 'tristan.meillat@sfr.fr', 621474836),
+(14, '$2y$10$LDOeE2wopFha5KTxN87CcOZjJ7zH6aqt/wbKg2vTnNWDxS.6vDrGq', 'n', 'Beurthe', 'Alex', 'alexbeurthe@gmail.com', 606060606);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
