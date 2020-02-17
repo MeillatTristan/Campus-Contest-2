@@ -12,7 +12,7 @@ else{
 
   }
   else{
-    include "configbdd.php";
+    //include "configbdd.php";
     if (isset($_REQUEST['idTomeToDel'])){
       $idTome = $_REQUEST['idTomeToDel'];
 
