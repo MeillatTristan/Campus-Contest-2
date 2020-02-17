@@ -36,6 +36,7 @@
 					<?php include 'myAccount.php' ?>
 					</section>
 				</div>
+				<a href="bibliotheque.php">Bibliothèque</a>
 			</section>
 
 		<!-- Footer -->
