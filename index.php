@@ -29,11 +29,16 @@
 						<header class="special">
 							<h2>LOUEZ VOS MANGA</h2>
 							<p>et à petit prix !</p>
+							<p><?php include 'header.php' ?></p>
+
 						</header>
-						<div class="button">
-              				<p><?php include 'connexion.php'?></p>
-              				<p><?php include 'header.php' ?></p>
-						</div>
+						<?php
+						if (!isset($_SESSION['id'])){
+							?>
+							<p><?php include 'connexion.php'?></p>
+							<?php
+						}
+						?>
 					</section>
 
 				<!-- Two -->

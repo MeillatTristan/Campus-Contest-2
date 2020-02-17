@@ -21,6 +21,8 @@
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
       }
       else{
+        $idSerieToAdd = $_REQUEST['idSerieAdd'];
+        $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idSerieToAdd")->fetch()[0];
         echo "<h2>ajouter un tome à la série $nameSerie</h2>";
         ?>
         <form action="addTome.php" method="post">
