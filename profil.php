@@ -20,6 +20,8 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">page profil</a></div>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="deconnexion.php">Déconnexion</a></li>
 			</header>
 
 		<!-- Main -->
@@ -41,7 +43,7 @@
 					</section>
 				</div>
 				<div class="biblioLink">
-					<a href="bibliotheque.php">Retour à la bibliothèque</a>
+					<a href="bibliotheque.php">Aller à la bibliothèque</a>
 				</div>
 			</section>
 

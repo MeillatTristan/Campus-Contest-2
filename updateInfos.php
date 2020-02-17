@@ -16,6 +16,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Mangas ++</a></div>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="profil.php">Retour page profil</a></li>
+				<li><a href="deconnexion.php">Déconnexion</a></li>
 			</header>
 
 		<!-- Main -->
