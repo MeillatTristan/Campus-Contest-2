@@ -15,6 +15,9 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration Gestion des séries</a></div>
+				<li><a href="index.php">Accueil</a></li>
+				<li><a href="pageAdmin.php">Gestion utilisateurs</a></li>
+      			<li><a href="deconnexion.php">Déconnexion</a></li>
 			</header>
 
 		<!-- Main -->

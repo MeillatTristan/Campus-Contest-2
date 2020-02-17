@@ -52,7 +52,7 @@ else{
                 echo "<br>";
                 echo "<td>". $nbTome."</td>" ;
                 echo "<br>";
-                echo "<td><a href='delTomeForm?idSerieDel=$idSerie'>Supprimer</a></td>" ;
+                echo "<td><a href='pageAdminGestionDelTomes?idSerieDel=$idSerie'>Supprimer</a></td>" ;
                 echo "<td><a href='pageAdminGestionTomes.php?idSerieAdd=$idSerie'>ajouter</a></td>" ;
                 echo "</tr>";
             }

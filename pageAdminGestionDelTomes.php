@@ -27,7 +27,7 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-					<?php include 'addTomeForm.php'?>
+					<?php include 'delTomeForm.php'?>
 					</section>
 					
 				<!-- Three -->
