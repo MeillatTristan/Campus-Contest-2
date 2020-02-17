@@ -58,7 +58,10 @@
     }
     ?>
         <div class="series">
-            <a href="pageAdminGestionSeries.php">Aller à la page gestion des séries</a>
+            <ul>
+                <li><a href="pageAdminGestionEmprunts.php">Aller à la page gestion des emprunts</a></li>
+                <li><a href="pageAdminGestionSeries.php">Aller à la page gestion des séries</a></li>
+            </ul>
         </div>
     </body>
 </html>

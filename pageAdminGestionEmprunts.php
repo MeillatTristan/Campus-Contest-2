@@ -6,22 +6,17 @@
 -->
 <html>
 	<head>
-		<title>mangas ++</title>
+		<title>Mangas ++</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/profil.css"/>
 	</head>
 	<body>
-		<?php
-		session_start();
-		?>
-
+		<?php session_start(); ?>
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="#">page profil</a></div>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="deconnexion.php">Déconnexion</a></li>
+				<div class="logo"><a href="#">Gestion des emprunts</a></div>
+				<?php include "header.php" ?>
 			</header>
 
 		<!-- Main -->
@@ -29,21 +24,12 @@
 				<div class="inner">
 
 				<!-- One -->
-					<section id="one" class="wrapperStyle1">
-					<?php include 'myAccount.php' ?>
+					<section id="one" class="wrapper style1">
+						<?php include 'empruntsView.php'?>
 					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapperStyle2">
-					<?php //include 'location.php' ?>
-					</section>
-
 				<!-- Three -->
 					<section id="three" class="wrapper">
 					</section>
-				</div>
-				<div class="biblioLink">
-					<a href="bibliotheque.php">Aller à la bibliothèque</a>
 				</div>
 			</section>
 
