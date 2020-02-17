@@ -36,15 +36,10 @@ else{
             $admin = $bdd->query("SELECT admin FROM users WHERE id = ".$users['id'] );
             echo "<tr>";
             echo "<td>". $users['name']."</td>" ;
-            echo "<br>";
             echo "<td>". $users['firstname']."</td>" ;
-            echo "<br>";
             echo "<td>". $users['email']."</td>" ;
-            echo "<br>";
             echo "<td>". $users['number']."</td>" ;
-            echo "<br>";
             echo "<td>". $users['admin']."</td>" ;
-            echo "<br>";
             echo "<td><a href='usersListeDelete.php?idDel=".$users['id']."'>Supprimer</a></td>" ;
             echo "<td><a href='profil.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
             echo "</tr>";
