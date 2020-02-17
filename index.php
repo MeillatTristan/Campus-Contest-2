@@ -34,7 +34,6 @@
 
 						</header>
 						<?php
-						session_start();
 						if (!isset($_SESSION['id'])){
 							?>
 							<p><?php include 'connexion.php'?></p>

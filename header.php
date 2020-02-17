@@ -1,5 +1,6 @@
 <ul>
   <?php
+    session_start();
     if(!isset($_SESSION['id'])){
       ?>
         <li><a href="creationDeCompte.php">Inscription</a></li>
