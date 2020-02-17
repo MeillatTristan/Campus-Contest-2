@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="assets/css/profil.css"/>
 	</head>
 	<body>
+		<?php
+		session_start();
+		?>
 
 		<!-- Header -->
 			<header id="header">

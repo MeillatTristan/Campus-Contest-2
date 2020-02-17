@@ -10,7 +10,6 @@
 <body>
   <?php
     include "configbdd.php";
-    session_start();
 
     if(!isset($_SESSION['id'])){
       echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
@@ -18,7 +17,7 @@
     else{
       $idUsers = $_SESSION['id'];
       $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
-      if ($admin->fetch()[0] == 'y'){
+      if ($admin->fetch()[0] == 'y' && isset($_REQUEST['idMaj'])){
         $idToMaj = $_REQUEST['idMaj'];
       }
       else{
