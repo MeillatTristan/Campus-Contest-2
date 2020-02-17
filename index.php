@@ -13,6 +13,7 @@
 		<title>manga++</title>
 	</head>
 	<body>
+		<?php 	session_start(); ?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo">
@@ -34,7 +35,6 @@
 
 						</header>
 						<?php
-						session_start();
 						if (!isset($_SESSION['id'])){
 							?>
 							<p><?php include 'connexion.php'?></p>
