@@ -13,13 +13,6 @@
 		<title>manga++</title>
 	</head>
 	<body>
-		<?php
-  		  $borrowingDate = date("d-m-Y");
-  		  $returnDate = date('d-m-Y',strtotime('+2 week',strtotime($borrowingDate)));
-
-  		  echo "$borrowingDate \n $returnDate";
-		?>
-
 		<!-- Header -->
 			<header id="header">
 				<div class="logo">

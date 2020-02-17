@@ -16,7 +16,6 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">page profil</a></div>
-				<?php include 'header.php' ?></p>
 			</header>
 
 		<!-- Main -->
@@ -29,12 +28,15 @@
 
 				<!-- Two -->
 					<section id="two" class="wrapper style2">
+					<?php include 'location.php' ?>
 					</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper">
+					<?php include 'myAccount.php' ?>
 					</section>
 				</div>
+				<a href="bibliotheque.php">Bibliothèque</a>
 			</section>
 
 		<!-- Footer -->
