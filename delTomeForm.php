@@ -35,22 +35,19 @@ else{
               <th>tome numéro </th>
               <th>stock à supprimer</th>
               <th>supprimer</th>
+              <th>supprimer le tome</th>
           </tr>
       </thead>
       <tbody>";
       while ( $tome = $tomes->fetch()){
-        if ($tome['stock'] <= 0){
-          $i++;
-        }
-        else{
           echo "<tr>";
           echo "<td>". $tome['tome']."</td>" ;
           echo "<br>";
           echo "<td>";
           echo "<form method='get' action='delTome.php'>";
-          echo "<input type='hidden' name='idTomeToDel' value= '".$tome['id']."'> </input>";
+          echo "<input type='hidden' name='idTomeToDelStock' value= '".$tome['id']."'> </input>";
           echo "<select name='stockToDel'>";
-          $i = 1 ;
+          $i = 0 ;
           while ($i <= $tome['stock']){
             echo "<option value='$i'>". $i ."</option>";
             $i++;
@@ -58,10 +55,11 @@ else{
           echo "</select>";
           echo "<td> <input type='submit' value='supprimer'> </td>";
           echo "</form>";
-          echo "</td>" ;
-          echo "<br>";
+          ?>
+          <td> <a href='delTome.php?idTomeToDel= <?php echo $tome['id'] ?>' > supprimer le tome </a> </td>
+          <?php
+          echo $tome['id'];
       }
-    }
     echo"
     </tbody>
 </table>";
