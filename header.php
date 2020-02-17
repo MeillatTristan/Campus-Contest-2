@@ -1,15 +1,13 @@
 <ul>
   <?php
-    session_start();
-    if (!isset($_SESSION['id'])){
+    if(!isset($_SESSION['id'])){
       ?>
-      <!-- <li><a href="connexion.php">connexion</a></li> -->
-      <li><a href="creationDeCompte.php">inscription</a></li>
+        <li><a href="creationDeCompte.php">Inscription</a></li>
       <?php
     }
     else{
       ?>
-      <li><a href="deconnexion.php">déconnexion</a></li>
+      <li><a href="deconnexion.php">Déconnexion</a></li>
       <?php
     }
   ?>
