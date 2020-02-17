@@ -12,7 +12,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration</a></div>
