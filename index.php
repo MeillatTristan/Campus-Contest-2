@@ -16,7 +16,8 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo">
-					<img src="images/Logo.PNG" alt="">
+					<img src="images/Logo.PNG" width="200" height="200" alt="">
+
 				</div>
 			</header>
 
