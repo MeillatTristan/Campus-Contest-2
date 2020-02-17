@@ -10,10 +10,25 @@
   <h2>Mes commandes</h2>
   <?php
     include "configbdd.php";
+    
+    if(!isset($_SESSION['id'])){
+      echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
+    }
+    $idUsers =  $_SESSION['id'];
+    $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
+    if ($admin->fetch()[0] != 'y'){
+      $verifAdmin = "id";
+  
+    }
+    else{$verifAdmin = "idMaj";
+    }
+
+    echo($verifAdmin);
+
     if (isset($_SESSION['id'])){
       $idUsers = $_SESSION['id'];
       $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
-      echo "<a href='updateInfos.php?idMaj=".$_SESSION['id']."'>Modifier mes infos</a>";
+      echo "<a href='updateInfos.php?idMaj=".$_REQUEST['idMaj']."'>Modifier mes infos</a>";
       echo "<h3>Commandes en cours</h3>";
       echo "<table>";
       echo "<td>Série </td>";

@@ -47,7 +47,7 @@ else{
                 echo "<td>". $users['admin']."</td>" ;
                 echo "<br>";
                 echo "<td><a href='usersListeDelete.php?idDel=".$users['id']."'>Supprimer</a></td>" ;
-                echo "<td><a href='updateUsersForm.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
+                echo "<td><a href='profil.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
                 echo "</tr>";
             }
         }
@@ -55,6 +55,4 @@ else{
         </tbody>
     </table>";
 }
-
-
 ?>

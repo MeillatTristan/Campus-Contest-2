@@ -17,6 +17,7 @@
       echo "veuillez vous connectez pour accéder à cette page";
     }
   else{
+    
     $userName = $bdd->query("SELECT name FROM users WHERE id = $idUsersModif")->fetch()[0];
     $userFirstname = $bdd->query("SELECT firstname FROM users WHERE id = $idUsersModif")->fetch()[0];
     $userMail = $bdd->query("SELECT email FROM users WHERE id = $idUsersModif")->fetch()[0];
