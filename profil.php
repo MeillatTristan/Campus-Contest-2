@@ -28,7 +28,7 @@
 
 				<!-- Two -->
 					<section id="two" class="wrapper style2">
-					<?php include 'location.php' ?>
+					<!-- <?php include 'location.php' ?> -->
 					</section>
 
 				<!-- Three -->
