@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ajouter un tome</title>
+  <title>Document</title>
 </head>
 <body>
-  <?php
+<?php
   session_start();
     if(!isset($_SESSION['id'])){
       echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
@@ -21,17 +21,18 @@
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
       }
       else{
-        echo "<h2>ajouter un tome à la série $nameSerie</h2>";
+        echo "<h2>ajouter une nouvelle série</h2>";
         ?>
-        <form action="addTome.php" method="post">
+        <form action="addSerie.php" method="post">
 
-          <input type='hidden' name='idSerieToAdd' value= "<?php echo $idSerieToAdd ?>" > </input>
+          <label for="name">Titre :</label>
+          <input type="text" id="name" name="name">
 
-          <label for="tomeNb">Tome numéro</label>
-          <input type="text" id="tomeNb" name="tomeNb">
+          <label for="auteur"> Auteur :</label>
+          <input type="text" id="auteur" name="auteur">
 
-          <label for="stock"> Stock :</label>
-          <input type="text" id="stock" name="stock">
+          <label for="ReleaseDate"> Date de parution :</label>
+          <input type="date" id="ReleaseDate" name="releaseDate">
 
           <input type="submit" value="Valider">
         </form>

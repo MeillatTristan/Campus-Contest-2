@@ -21,15 +21,16 @@
       echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
     }
     else{
-      $idSerieToAdd = $_REQUEST['idSerieToAdd'];
-      $tomeNb = $_REQUEST['tomeNb'];
-      $stockToAdd = $_REQUEST['stock'];
-      $tomeExist = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerieToAdd AND tome = $tomeNb")->fetch()[0];
+      $nameSerie = $_REQUEST['name'];
+      $auteurSerie = $_REQUEST['auteur'];
+      $releaseDate = $_REQUEST['releaseDate'];
+      echo $releaseDate."  ".$auteurSerie."  ".$nameSerie;
+      $tomeExist = $bdd->query("SELECT COUNT(*) FROM series WHERE name = '$nameSerie' AND author = '$auteurSerie'")->fetch()[0];
       if ($tomeExist > 0){
-        echo "<p>Ce tome existe déjà</p>";
+        echo "<p>Cette série est déjà dans la base de donnée</p>";
       }
       else{
-        $bdd->query("INSERT INTO tome SET serieID = '$idSerieToAdd', tome = '$tomeNb', stock = '$stockToAdd'");
+        $bdd->query("INSERT INTO series SET name = '$nameSerie', author = '$auteurSerie', releaseDate = '$releaseDate'");
       }
     }
   }

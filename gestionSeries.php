@@ -58,10 +58,11 @@ else{
             echo"
             </tbody>
         </table>";
+        ?>
+        <a href="addSerieForm.php">Ajouter une série</a>
+        <?php
     }
 }
-
-
 ?>
 </body>
 </html>
