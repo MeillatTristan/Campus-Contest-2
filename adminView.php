@@ -19,8 +19,8 @@ else{
     }
 
     $requete = $bdd->query('SELECT * FROM users');
-    echo "Supprimer un utilisateur";
     echo "
+    <h3>Utilisateurs :</h3>
     <table>
         <thead>
             <tr>
