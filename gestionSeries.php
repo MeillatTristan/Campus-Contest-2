@@ -25,6 +25,7 @@ else{
 
     }
     else{
+        echo "<h2>séries actuelle</h2>";
         $series = $bdd->query("SELECT * FROM series");
         echo "
         <table>
@@ -52,14 +53,14 @@ else{
                 echo "<td>". $nbTome."</td>" ;
                 echo "<br>";
                 echo "<td><a href='delTomeForm?idSerieDel=$idSerie'>Supprimer</a></td>" ;
-                echo "<td><a href='addTomeForm.php?idSerieAdd=$idSerie'>ajouter</a></td>" ;
+                echo "<td><a href='pageAdminGestionTomes.php?idSerieAdd=$idSerie'>ajouter</a></td>" ;
                 echo "</tr>";
             }
             echo"
             </tbody>
         </table>";
         ?>
-        <a href="addSerieForm.php">Ajouter une série</a>
+        <!-- <a href="addSerieForm.php">Ajouter une série</a> -->
         <?php
     }
 }
