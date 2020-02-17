@@ -22,7 +22,15 @@
     }
     else{
       $idSerieToAdd = $_REQUEST['idSerieToAdd'];
-      
+      $tomeNb = $_REQUEST['tomeNb'];
+      $stockToAdd = $_REQUEST['stock'];
+      $tomeExist = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerieToAdd AND tome = $tomeNb")->fetch()[0];
+      if ($tomeExist > 0){
+        echo "<p>Ce tome existe déjà</p>";
+      }
+      else{
+        $bdd->query("INSERT INTO tome SET serieID = $idSerieToAdd, tome = $tomeNb, stock = $stockToAdd");
+      }
     }
   }
 ?>
