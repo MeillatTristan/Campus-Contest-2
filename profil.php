@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/profil.css"/>
 	</head>
 	<body>
 
@@ -23,11 +24,11 @@
 				<div class="inner">
 
 				<!-- One -->
-					<section id="one" class="wrapper style1">
+					<section id="one" class="wrapperStyle1">
 					</section>
 
 				<!-- Two -->
-					<section id="two" class="wrapper style2">
+					<section id="two" class="wrapperStyle2">
 					<!-- <?php include 'location.php' ?> -->
 					</section>
 
@@ -36,7 +37,9 @@
 					<?php include 'myAccount.php' ?>
 					</section>
 				</div>
-				<a href="bibliotheque.php">Bibliothèque</a>
+				<div class="biblioLink">
+					<a href="bibliotheque.php">Retour à la bibliothèque</a>
+				</div>
 			</section>
 
 		<!-- Footer -->
