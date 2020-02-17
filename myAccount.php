@@ -9,12 +9,11 @@
 <body>
   <h2>Mes commandes</h2>
   <?php
-    include "header.php";
     include "configbdd.php";
     if (isset($_SESSION['id'])){
       $idUsers = $_SESSION['id'];
       $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
-      echo "<a href='updateUsersForm.php?idMaj=".$_SESSION['id']."'>Modifier</a>";
+      echo "<a href='updateInfos.php?idMaj=".$_SESSION['id']."'>Modifier mes infos</a>";
       echo "<h3>Commandes en cours</h3>";
       echo "<table>";
       echo "<td>Série </td>";
