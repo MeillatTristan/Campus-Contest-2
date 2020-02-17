@@ -21,7 +21,7 @@
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
 
     }
-    else{
+    else {
         if(isset($_REQUEST['idDel'])){
             $idDel = $_REQUEST['idDel'];
             $bdd->query("DELETE FROM users WHERE id = $idDel");
