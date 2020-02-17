@@ -25,11 +25,7 @@
 					<section id="one" class="wrapper style1">
 						<?php include 'adminView.php'?>
 					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style2">
-					</section>
-
+					
 				<!-- Three -->
 					<section id="three" class="wrapper">
 					</section>
