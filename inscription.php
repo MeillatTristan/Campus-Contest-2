@@ -15,16 +15,16 @@
   <form action="createUser.php" method="post">
 
     <label for="name">Nom :</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" minlength="2" required>
 
     <label for="firstname">Prénom :</label>
-    <input type="text" id="firstname" name="user_firstname">
+    <input type="text" id="firstname" name="user_firstname" minlength="2" required>
 
     <label for="mail">e-mail :</label>
-    <input type="email" id="mail" name="user_mail">
+    <input type="email" id="mail" name="user_mail" minlength="2" required>
 
     <label for="phone">Numéro de téléphone :</label>
-    <input type="text" id="phone" name="phone">
+    <input type="text" id="phone" name="phone" minlength="6" required>
 
     <label for="password">Mot de Passe (8 caractère minimum):</label>
     <input type="password" id="password" name="password" minlength="8" required>

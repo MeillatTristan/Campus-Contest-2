@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_SESSION['id'])){
     echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
 }

@@ -26,13 +26,13 @@
         <form action="addSerie.php" method="post">
 
           <label for="name">Titre :</label>
-          <input type="text" id="name" name="name">
+          <input type="text" id="name" name="name" minlength="2" required>
 
           <label for="auteur"> Auteur :</label>
-          <input type="text" id="auteur" name="auteur">
+          <input type="text" id="auteur" name="auteur" minlength="2" required>
 
           <label for="ReleaseDate"> Date de parution :</label>
-          <input type="date" id="ReleaseDate" name="releaseDate">
+          <input type="date" id="ReleaseDate" name="releaseDate" required>
 
           <input type="submit" value="Valider">
         </form>

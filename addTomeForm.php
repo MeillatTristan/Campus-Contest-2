@@ -30,10 +30,10 @@
           <input type='hidden' name='idSerieToAdd' value= "<?php echo $idSerieToAdd ?>" > </input>
 
           <label for="tomeNb">Tome numéro</label>
-          <input type="text" id="tomeNb" name="tomeNb">
+          <input type="text" id="tomeNb" name="tomeNb" minlength="1" required>
 
           <label for="stock"> Stock :</label>
-          <input type="text" id="stock" name="stock">
+          <input type="text" id="stock" name="stock"minlength="1" required>
 
           <input type="submit" value="Valider">
         </form>
