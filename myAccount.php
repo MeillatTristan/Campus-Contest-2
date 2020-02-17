@@ -24,7 +24,7 @@
         $idToMaj = $idUsers;
       }
       $idUsers = $_SESSION['id'];
-      $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
+      $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idToMaj");
       echo "<a class='updateinfos' href='updateInfos.php?idMaj=".$idToMaj."'>Modifier mes infos</a>";
       ?>
       <h2>Mes commandes</h2>
