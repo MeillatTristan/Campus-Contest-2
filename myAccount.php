@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/profil.css">
   <title>Mon compte</title>
 </head>
 <body>
-  <h2>Mes commandes</h2>
   <?php
     include "configbdd.php";
     
@@ -28,7 +28,14 @@
     if (isset($_SESSION['id'])){
       $idUsers = $_SESSION['id'];
       $locations = $bdd->query("SELECT * FROM locations WHERE customersID = $idUsers");
+<<<<<<< HEAD
       echo "<a href='updateInfos.php?idMaj=".$_REQUEST['idMaj']."'>Modifier mes infos</a>";
+=======
+      echo "<a class='updateinfos' href='updateInfos.php?idMaj=".$_SESSION['id']."'>Modifier mes infos</a>";
+      ?>
+      <h2>Mes commandes</h2>
+      <?php
+>>>>>>> dce1f81b86fa4a560e32326d5216139aa5ec32b9
       echo "<h3>Commandes en cours</h3>";
       echo "<table>";
       echo "<td>Série </td>";

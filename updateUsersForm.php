@@ -22,6 +22,7 @@
     $userFirstname = $bdd->query("SELECT firstname FROM users WHERE id = $idUsersModif")->fetch()[0];
     $userMail = $bdd->query("SELECT email FROM users WHERE id = $idUsersModif")->fetch()[0];
     $userNum = $bdd->query("SELECT number FROM users WHERE id = $idUsersModif")->fetch()[0];
+    $userAdmin = $bdd->query("SELECT admin FROM users WHERE id = $idUsersModif")->fetch()[0];
     ?>
     <form action="updateUsers.php" method="post">
 
@@ -41,6 +42,15 @@
 
       <label for="password">Mot de Passe (8 caractère minimum):</label>
       <input type="password" id="password" name="password" minlength="8" required>
+
+      <?php
+        if ($admin == 'y'){
+          ?>
+          <label for="admin">admin :</label>
+          <input type="text" id="admin" name="admin" value='<?php echo"$userAdmin" ?>'>
+          <?php
+        }
+      ?>
 
       <input type="submit" value="Valider">
     </form>
