@@ -12,9 +12,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
+		<?php session_start(); ?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration</a></div>
+				<?php include "header.php" ?>
 			</header>
 
 		<!-- Main -->
@@ -25,7 +27,6 @@
 					<section id="one" class="wrapper style1">
 						<?php include 'adminView.php'?>
 					</section>
-					
 				<!-- Three -->
 					<section id="three" class="wrapper">
 					</section>
