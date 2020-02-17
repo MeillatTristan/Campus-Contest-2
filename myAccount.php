@@ -43,7 +43,7 @@
           $tome = $location['tome'];
           $borrowingDate = $location['borrowingDate'];
           $returnDate = $location['returnDate'];
-          ?>
+      ?>
             <tr>
               <td><?php echo $nameSerie?> </td>
               <td><?php echo $tome?> </td>
@@ -56,7 +56,7 @@
               ?>
             </tr>
           </table>
-          <?php
+      <?php
         }
       }
       echo "<h3>Commandes terminées</h3>";
