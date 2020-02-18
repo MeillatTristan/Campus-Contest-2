@@ -8,6 +8,7 @@
 </head>
 <body>
   <?php
+  session_start();
     include "header.php";
     if (isset($_SESSION['id'])){
       include 'configbdd.php';

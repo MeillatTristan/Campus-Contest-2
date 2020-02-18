@@ -23,16 +23,19 @@ else{
 
   }
   else{
-  ?>
-  <h3>Les emprunts en cours</h3>
-  <table>
-    <td>Emprunteur</td>
-    <td>Série </td>
-    <td>Tome </td>
-    <td>Date d'emprunt </td>
-    <td>Date de retour </td>
-    <td>Livre retourner</td>
-    <td>mail</td>
+    ?>
+    <h3>Les emprunts en cours</h3>
+    <table>
+    <thead>
+      <td>Emprunteur</td>
+      <td>Série </td>
+      <td>Tome </td>
+      <td>Date d'emprunt </td>
+      <td>Date de retour </td>
+      <td>Livre retourner</td>
+      <td>mail</td>
+    </thead>
+    <tbody>
     <?php
     include "configbdd.php";
     $locations = $bdd->query("SELECT * FROM locations");
@@ -40,15 +43,14 @@ else{
       $idCustomer = $location['customersID'];
       $customer = $bdd->query("SELECT * FROM users WHERE id = $idCustomer")->fetch();
       if ($location['returnBool'] == 'n'){
-        $idLocationSerie = $location['serieID'];
         $idLocation = $location['id'];
+        $idLocationSerie = $location['serieID'];
         $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
         $tome = $location['tome'];
         $borrowingDate = $location['borrowingDate'];
         $returnDate = $location['returnDate'];
         $mailCustomer = $customer['email'];
         $textMail = "Bonjour, %0D%0A vous avez louer le tome $tome de $nameSerie le $borrowingDate, vous étiez sensé le rendre le $returnDate.  %0D%0A Merci de le rapporter en magasin le plus vite possible. %0D%0A Bonne journée, %0D%0A l`équipe Manga++";
-
         ?>
           <tr>
             <td> <?php echo $customer['name']." ".$customer['firstname'] ?> </td>
@@ -64,44 +66,50 @@ else{
       }
             ?>
           </tr>
-    </table>
-  <?php
-  }
-  ?>
-  <h3>Les emprunts en cours</h3>
-  <table>
-    <td>Emprunteur</td>
-    <td>Série </td>
-    <td>Tome </td>
-    <td>Date d'emprunt </td>
-    <td>Date de retour </td>
+        </tbody>
     <?php
-    include "configbdd.php";
-    $locations = $bdd->query("SELECT * FROM locations");
-    while ($location = $locations->fetch()){
-      $idCustomer = $location['customersID'];
-      $customer = $bdd->query("SELECT * FROM users WHERE id = $idCustomer")->fetch();
-      if ($location['returnBool'] == 'y'){
-        $idLocationSerie = $location['serieID'];
-        $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
-        $tome = $location['tome'];
-        $borrowingDate = $location['borrowingDate'];
-        $returnDate = $location['returnDate'];
-        ?>
-          <tr>
-            <td> <?php echo $customer['name']." ".$customer['firstname'] ?> </td>
-            <td><?php echo $nameSerie?> </td>
-            <td><?php echo $tome?> </td>
-            <td><?php echo $borrowingDate?> </td>
-            <td><?php echo $returnDate?> </td>
-            <?php
-      }
-            ?>
-          </tr>
-    </table>
-  <?php
+
+    }
+    echo "</table>"
+    ?>
+    <h3>Les emprunts en cours</h3>
+    <table>
+      <thead>
+        <td>Emprunteur</td>
+        <td>Série </td>
+        <td>Tome </td>
+        <td>Date d'emprunt </td>
+        <td>Date de retour </td>
+      </thead>
+      <tbody>
+      <?php
+      include "configbdd.php";
+      $locations = $bdd->query("SELECT * FROM locations");
+      while ($location = $locations->fetch()){
+        $idCustomer = $location['customersID'];
+        $customer = $bdd->query("SELECT * FROM users WHERE id = $idCustomer")->fetch();
+        if ($location['returnBool'] == 'y'){
+          $idLocationSerie = $location['serieID'];
+          $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
+          $tome = $location['tome'];
+          $borrowingDate = $location['borrowingDate'];
+          $returnDate = $location['returnDate'];
+          ?>
+            <tr>
+              <td> <?php echo $customer['name']." ".$customer['firstname'] ?> </td>
+              <td><?php echo $nameSerie?> </td>
+              <td><?php echo $tome?> </td>
+              <td><?php echo $borrowingDate?> </td>
+              <td><?php echo $returnDate?> </td>
+              <?php
+        }
+              ?>
+            </tr>
+          </tbody>
+    <?php
+    }
+    echo "</table>";
   }
-}
 }
   ?>
 </body>
