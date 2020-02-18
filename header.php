@@ -4,6 +4,7 @@
     if(!isset($_SESSION['id'])){
       ?>
         <li><a href="creationDeCompte.php">Inscription</a></li>
+        <li><a href="index.php">connexion</a></li>
       <?php
     }
     else{
@@ -18,6 +19,7 @@
       <li><a href="bibliotheque.php">Bibliothèque</a></li>
       <li><a href="index.php">Accueil</a></li>
       <li><a href="deconnexion.php">Déconnexion</a></li>
+
       <?php
     }
   ?>
