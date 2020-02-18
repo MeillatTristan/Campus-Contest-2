@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 18 fév. 2020 à 10:49
+-- Généré le :  mar. 18 fév. 2020 à 14:13
 -- Version du serveur :  5.7.26
--- Version de PHP :  7.2.18
+-- Version de PHP :  7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(255) NOT NULL,
   `number` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
@@ -132,7 +132,8 @@ INSERT INTO `users` (`id`, `password`, `admin`, `name`, `firstname`, `email`, `n
 (11, '$2y$10$RLW.tbhS8678XBpmgXSKcegwh0jzC1/ecw7OZVD1WtNl5GmfqYjlu', 'y', 'meillat', 'tristan', 'tristan.meillat@sfr.fr', '0621474836'),
 (14, '$2y$10$l2xST7Zx/A3ZzVck8UoGVuYfkEn3oql53UQRFfedHtqg7M87BgD7O', 'n', 'Burt', 'Alex', 'alexbeurthe@gmail.com', '606060606'),
 (15, '$2y$10$CeUDzRe/zoDB7beL1V4guuvbpq63FIK.kgi4JCLjpFEXAJez1xDe.', 'n', 'Quillet', 'Olivier', 'olivierquillet@gmail.com', '652545856'),
-(17, '$2y$10$YIB4urOr/Z7VXARqChKIHeFX5GmpxUJyv6JxUNC/uBLRNsWml2Rt.', 'y', 'Niel', 'Kevin', 'kevinniel@gmail.com', '606060606');
+(17, '$2y$10$YIB4urOr/Z7VXARqChKIHeFX5GmpxUJyv6JxUNC/uBLRNsWml2Rt.', 'y', 'Niel', 'Kevin', 'kevinniel@gmail.com', '606060606'),
+(18, '$2y$10$Hs4PhRLlEVl0J9pCAlkRnOFLrJPeIVMJWIXopgb9Ojb0HjCLtO1/6', 'n', 'Monnier', 'Jean-Louis', 'jean-louis.monnier@students.campus.academy', '780376830');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
