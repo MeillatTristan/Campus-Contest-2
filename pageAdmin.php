@@ -28,11 +28,7 @@
 						<p><?php include "header.php" ?></p>
 						<?php include 'adminView.php'?>
 					</section>
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-				</div>
-			</section>
+
 
 		<!-- Footer -->
 			<footer id="footer">

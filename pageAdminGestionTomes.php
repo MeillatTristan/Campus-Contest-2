@@ -30,11 +30,6 @@
 					<?php include 'addTomeForm.php'?>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-				</div>
-			</section>
 
 		<!-- Footer -->
 			<footer id="footer">
