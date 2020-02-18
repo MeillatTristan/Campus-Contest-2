@@ -1,8 +1,14 @@
 .tailleChamps {
-    width: 20%;
+    width: 21%;
+    text-align: center;
 }
 
 .conteneurSerie {
     display:flex;
     justify-content: space-around;
+}
+
+.tailleChamps img{
+    max-width: 200px;
+    max-height: 200px;
 }

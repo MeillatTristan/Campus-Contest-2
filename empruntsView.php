@@ -54,7 +54,7 @@ else{
         ?>
           <tr>
             <td> <?php
-            if (!isset($idCustomer)){
+            if (isset($idCustomer)){
             echo $customer['name']." ".$customer['firstname'];
             }
             else{
