@@ -109,7 +109,7 @@ http://localhost/Campus-Contest-2/
 
 * [PHP](https://www.php.net/) - From scratch en procédural
 * [MySQL](https://www.mysql.com/fr/) - Gestion de base de donnée
-* [HTML/CSS]- Pour la mise en forme avec l'aide d'un template
+* HTML/CSS- Pour la mise en forme avec l'aide d'un template
 source:
 ```
 https://templated.co/caminar
