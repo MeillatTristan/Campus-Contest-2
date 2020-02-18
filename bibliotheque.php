@@ -15,7 +15,7 @@
 			<section id="main">
 				<div class="inner">
 				<!-- One -->
-				<!-- inclusion du header et du fichier location -->
+				<!-- page bibliotheque avec la liste des series disponible et inclusion du header et du fichier location -->
 					<section id="one" class="wrapper style1">
 					<h3>Bibliothèque : location</h3>
 					<p> <?php include "header.php"?> </p>

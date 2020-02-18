@@ -1,5 +1,5 @@
 <?php
-
+//script appellé lors de la creation d'un nouvel utilisateur dans la base de données
   $name = $_REQUEST['user_name'];
   $firstname = $_REQUEST['user_firstname'];
   $mail = $_REQUEST['user_mail'];

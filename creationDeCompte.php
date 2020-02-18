@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Caminar by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Mangas ++</title>
@@ -25,6 +20,7 @@
 			<div class="inner">
 
 			<!-- One -->
+			<!-- page de creation de compte avec appel du formulaire d'inscription -->
 				<section id="one" class="wrapper style1">
 				<?php include 'inscription.php'?>
 				</section>

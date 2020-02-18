@@ -26,6 +26,7 @@
 				<div class="inner">
 
 				<!-- One -->
+				<!-- page d'administration pour ajouter des tomes avec appel de la fonction addTomeForm -->
 					<section id="one" class="wrapper style1">
 					<?php include 'addTomeForm.php'?>
 					</section>

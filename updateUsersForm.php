@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+  <!-- formulaire de modification des infos utilisateurs possibilité de creer un nouvel admin-->
     <?php
       session_start();
       include 'configbdd.php';

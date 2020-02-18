@@ -1,4 +1,5 @@
 <?php
+//permet de suprimer un utlisateur de la liste dans la page admin 
     session_start();
 
     if(!isset($_SESSION['id'])){

@@ -7,6 +7,7 @@
     <title>reservation</title>
   </head>
   <body>
+  <!-- page de reservation des tomes avec appel du header -->
     <?php
       session_start();
       include "header.php";

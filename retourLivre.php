@@ -1,6 +1,6 @@
 <?php
+  //script pour le retour des livres en boolean. retour sur la page gestion des emprunts
   session_start();
-  echo "yo";
   if(!isset($_SESSION['id'])){
       echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
   }

@@ -22,6 +22,7 @@
 			</header>
 
 		<!-- Main -->
+		<!-- script de modification des infos avec appel de updateUsersForm pour modifier les infos des utilisateurs -->
 			<section id="main">
 				<div class="inner">
 
@@ -29,15 +30,6 @@
 					<section id="one" class="wrapper style1">
 					<?php include 'updateUsersForm.php'?>
 					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style2">
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-
 				</div>
 			</section>
 

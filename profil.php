@@ -29,15 +29,10 @@
 			<div class="inner">
 
 			<!-- One -->
+			<!-- page profil utilisateur avec appel du script myAccount -->
 				<section id="one" class="wrapperStyle1">
 				<?php include 'myAccount.php' ?>
 				</section>
-
-			<!-- Two -->
-				<section id="two" class="wrapperStyle2">
-				<?php //include 'location.php' ?>
-				</section>
-
 			<!-- Three -->
 				<section id="three" class="wrapper">
 				</section>

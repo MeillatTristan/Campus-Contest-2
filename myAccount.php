@@ -8,6 +8,7 @@
     <title>Mon compte</title>
   </head>
   <body>
+  <!-- script appellé qui permet de voir quels tomes sont loué ou reservé et la date de retour de ceux ci -->
     <?php
       include "configbdd.php";
 

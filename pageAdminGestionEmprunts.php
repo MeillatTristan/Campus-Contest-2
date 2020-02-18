@@ -23,6 +23,7 @@
 				<div class="inner">
 
 				<!-- One -->
+				<!-- page d'admin de gestion des emprunts avec appelle du header et du script empruntsView -->
 					<section id="one" class="wrapper style1">
 						<h3>Page admin</h3>
 						<?php include "header.php" ?>

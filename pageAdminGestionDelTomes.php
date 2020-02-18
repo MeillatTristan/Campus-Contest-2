@@ -26,6 +26,7 @@
 				<div class="inner">
 
 				<!-- One -->
+				<!-- page d'administration de suppression des tomes -->
 					<section id="one" class="wrapper style1">
 					<?php include 'delTomeForm.php'?>
 					</section>

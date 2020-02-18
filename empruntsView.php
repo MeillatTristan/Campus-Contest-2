@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
   <body>
+  <!-- script pour voir quels tomes ont été empruntés -->
     <?php
 
       if(!isset($_SESSION['id'])){

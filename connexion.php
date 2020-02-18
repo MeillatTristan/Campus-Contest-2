@@ -8,6 +8,7 @@
   <title>connexion</title>
 </head>
 <body>
+<!-- script appellé lors de la connexion en admin ou utlisateur -->
   <?php
     if(isset($_SESSION['id'])){
       header('Location: index.php');
