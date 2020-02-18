@@ -18,6 +18,7 @@
       $idCustomers = $_SESSION['id'];
       $borrowingDate = date("Y-m-d");
       $returnDate = date('Y-m-d',strtotime('+2 week',strtotime($borrowingDate)));
+      echo $idSerie;
 
       $stock = $bdd->query("SELECT stock from tome WHERE tome = $tome AND serieID = $idSerie")->fetch()[0];
       if ($stock > 0){

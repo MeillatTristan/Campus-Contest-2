@@ -27,12 +27,12 @@
         $tomes = $bdd->query("SELECT * from tome WHERE serieID = $idSerie");
         ?>
         <form method='post' action='reservation.php'>
-          <input type='hidden' name='serie' value= '$idSerie'>
+          <?php echo "<input type='hidden' name='serie' value= '$idSerie'>" ?>
           <select name='tome'>
             <?php
             while ($tome = $tomes->fetch()){
               if ($tome['stock'] > 0){
-                echo "<option value='".$tome['tome']."'>". $tome['tome'] ."</option>";
+                echo "<option value='".$tome['tome']."'>". $tome['tome'] ."  (".$tome['stock'].")</option>";
               }
               else{
                 echo "<option value='indisponible' disabled='disabled'>". $tome['tome'] ." (indisponible)</option>";
