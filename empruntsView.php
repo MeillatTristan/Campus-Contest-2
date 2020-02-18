@@ -53,7 +53,14 @@ else{
         $textMail = "Bonjour, %0D%0A vous avez louer le tome $tome de $nameSerie le $borrowingDate, vous étiez sensé le rendre le $returnDate.  %0D%0A Merci de le rapporter en magasin le plus vite possible. %0D%0A Bonne journée, %0D%0A l`équipe Manga++";
         ?>
           <tr>
-            <td> <?php echo $customer['name']." ".$customer['firstname'] ?> </td>
+            <td> <?php
+            if (!isset($idCustomer)){
+            echo $customer['name']." ".$customer['firstname'];
+            }
+            else{
+              echo "compte supprimé";
+            }
+            ?> </td>
             <td><?php echo $nameSerie?> </td>
             <td><?php echo $tome?> </td>
             <td><?php echo $borrowingDate?> </td>
