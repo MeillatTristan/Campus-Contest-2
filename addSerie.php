@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- section pour ajouter une serie si vous etes administrateur -->
     <?php
       session_start();
       if(!isset($_SESSION['id'])){

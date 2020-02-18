@@ -1,4 +1,5 @@
 <ul class="navBar">
+<!-- script appellé sur les pages pour apporter les fonctionnalitées de navigation et de déconnexion -->
   <?php
     include "configbdd.php";
     if(!isset($_SESSION['id'])){

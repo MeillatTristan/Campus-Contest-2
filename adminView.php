@@ -7,6 +7,7 @@
         <title>Document</title>
     </head>
     <body>
+    <!-- script appellé pour voir la liste des utilisateurs dans la page admin -->
         <?php
             if(!isset($_SESSION['id'])){
                 echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";

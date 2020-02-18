@@ -1,5 +1,6 @@
 <?php
   include "configbdd.php";
+  //script de verification de l'autentification de l'utilisateur;
 
   $email = $_REQUEST["email"];
   $password = $_REQUEST['password'];
@@ -11,10 +12,11 @@
 
   $isPasswordCorrect = password_verify($password, $resultat['password']);
 
+  //ouverture d'une super variable session si le password est correct;
+
   if (!$resultat){
     echo 'Mauvais email ou mot de passe !';
   }
-
   else{
     if ($isPasswordCorrect) {
         session_start();
