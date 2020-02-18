@@ -8,5 +8,9 @@
 
   include 'configbdd.php';
   $bdd->query("UPDATE users SET name='$name', firstname='$firstname', email='$mail', number=$phone, password='$password' WHERE id = $id");
+  if (isset($_REQUEST['admin'])){
+    $admin = $_REQUEST['admin'];
+    $bdd->query("UPDATE users SET admin = '$admin' WHERE id = $id");
+  }
   header('Location: profil.php');
 ?>
