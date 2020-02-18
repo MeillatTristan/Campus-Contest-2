@@ -16,7 +16,6 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Gestion des emprunts</a></div>
-				<?php include "header.php" ?>
 			</header>
 
 		<!-- Main -->
@@ -25,13 +24,10 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
+						<h3>Page admin</h3>
+						<?php include "header.php" ?>
 						<?php include 'empruntsView.php'?>
 					</section>
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-				</div>
-			</section>
 
 		<!-- Footer -->
 			<footer id="footer">

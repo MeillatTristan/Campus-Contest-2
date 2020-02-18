@@ -2,10 +2,10 @@
 
 Manga++ est un site web de location de manga qui doit permettre aux clients de se connecter et de réserver des ouvrages en ligne.
 
-Le patron de sont équipe doivent pouvoir suivre les retrait/emprunts des ouvrages suite a une reservation en ligne ou non et de suivre en temps réel les entrées et les sorties.
-Ils pouront aussi accéder à la base de donnés clients et y apporter des modifications si besoin.
+Le patron et son équipe doivent pouvoir suivre les retraits/emprunts des ouvrages suite à une reservation en ligne ou non et de suivre en temps réel les entrées et les sorties.
+Ils pouront aussi acceder à la base de données clients et y apporter des modifications si besoin.
 
-L'équipe ainsi que le patron vont pouvoir relancer automatiquement par mail les clients n'ayant pas ramené leur ouvrage au-delà d'un certain delai.
+L'équipe pourront relancer automatiquement par mail les clients n'ayant pas ramené leurs ouvrages au-delà d'un certain délai.
 
 
 ## Pour commencer
@@ -18,7 +18,7 @@ https://github.com/MeillatTristan/Campus-Contest-2.git
 
 ### Conditions préalables
 
-Pour pouvoir lancer l'application e local il vous faudra installer wamp (xamp ou mamp suivant votre système d'exploitation).
+Pour pouvoir lancer l'application en local il vous faudra installer wamp (xamp ou mamp suivant votre système d'exploitation).
 Wamp:
 ```
 http://www.wampserver.com/
@@ -39,7 +39,7 @@ https://gitforwindows.org/
 
 ### Installation
 
-Pour cloner le projet rendez vous dans votre fichier /www de wamp qui se trouve ici
+Pour cloner le projet rendez-vous dans votre fichier /www de wamp qui se trouve par défault :
 
 ```
 C:\wamp64\www\
@@ -51,7 +51,7 @@ Ouvrez git bash dans votre fichier ou votre invite de commande pour les personne
 git clone https://github.com/MeillatTristan/Campus-Contest-2.git
 ```
 
-Suite à cela lancer wamp (xamp,mamp), ouvrer php myadmin et importez la base de donnée.
+Suite à cela lancez wamp (xamp,mamp), ouvrez php myadmin et importez la base de donnée.
 Pour ça entrez cette url dans votre navigateur:
 
 ```
@@ -68,7 +68,7 @@ Mot de passe:
 none
 ```
 
-Après vous être connnecté dans la barre a droite cliquez sur 
+Après vous être connnecté dans la barre à droite cliquez sur 
 
 ```
 Nouvelle base de données
@@ -89,7 +89,7 @@ puis
 choisir un fichier
 ```
 
-cherchez maintenant le fichier 'manga.sql' dans le répertoire:
+cherchez maintenant le fichier 'manga.sql' dans le répertoire :
 
 ```
 C:\wamp64\www\Campus-Contest-2

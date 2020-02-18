@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>N'Gyen Mangas</title>
+		<title>Manga++</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -29,12 +29,6 @@
 					<section id="one" class="wrapper style1">
 					<?php include 'delTomeForm.php'?>
 					</section>
-					
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-				</div>
-			</section>
 
 		<!-- Footer -->
 			<footer id="footer">

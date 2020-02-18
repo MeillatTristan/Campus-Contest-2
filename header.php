@@ -1,4 +1,4 @@
-<ul>
+<ul class="navBar">
   <?php
     include "configbdd.php";
     if(!isset($_SESSION['id'])){

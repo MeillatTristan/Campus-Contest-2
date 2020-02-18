@@ -12,12 +12,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
+	<?php session_start(); ?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration Gestion des séries</a></div>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="pageAdmin.php">Gestion utilisateurs</a></li>
-      			<li><a href="deconnexion.php">Déconnexion</a></li>
 			</header>
 
 		<!-- Main -->
@@ -26,16 +24,11 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
+						<?php include "header.php" ?>
 					<?php include 'gestionSeries.php'?>
 					<?php include 'addSerieForm.php'?>
 
 					</section>
-					
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-				</div>
-			</section>
 
 		<!-- Footer -->
 			<footer id="footer">

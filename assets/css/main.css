@@ -161,6 +161,17 @@
 			width: 90%;
 		}
 
+		.conteneurSerie{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		tailleChamps {
+			width: 50%;
+			text-align: center;
+	}
+
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1700,7 +1711,9 @@
 	}
 
 	h3 {
+		padding-top: 25px;
 		font-size: 1.35rem;
+		text-align: center;
 	}
 
 	h4 {
@@ -1784,7 +1797,8 @@
 	}
 
 	a {
-		color: #54a354;
+		color:#dd1d25;
+		opacity: 0.50;
 	}
 
 	strong, b {
@@ -2444,7 +2458,6 @@
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
-		padding-left: 1rem;
 	}
 
 		ul li {
@@ -2920,7 +2933,7 @@
 			-ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			content: '';
-			background-image: url(../../images/bg.jpg);
+			background-image: url(https://www.ecopetit.cat/wpic/mpic/19-192679_flat-landscape-minimalism-trees-sunset-river-artwork-hd.jpg);
 			background-attachment: fixed;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -3055,7 +3068,8 @@
 			font-weight: 300;
 			font-size: .8rem;
 			letter-spacing: .25rem;
-			margin: 0;
+			margin-top: 20px;
+			padding-left: 10px;
 		}
 
 		.wrapper > header.special {
@@ -3173,4 +3187,15 @@
 				padding: 1rem 0 0.1rem 0 ;
 			}
 
+		}
+
+		.navBar{
+			list-style: none;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		a:link
+		{
+		text-decoration:none;
 		}

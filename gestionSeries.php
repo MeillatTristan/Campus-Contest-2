@@ -10,7 +10,6 @@
     
 
 <?php
-session_start();
 
 if(!isset($_SESSION['id'])){
     echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
@@ -45,13 +44,9 @@ else{
                 $nbTome = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerie")->fetch()[0];
                 echo "<tr>";
                 echo "<td>". $serie['name']."</td>" ;
-                echo "<br>";
                 echo "<td>". $serie['author']."</td>" ;
-                echo "<br>";
                 echo "<td>". $serie['releaseDate']."</td>" ;
-                echo "<br>";
                 echo "<td>". $nbTome."</td>" ;
-                echo "<br>";
                 echo "<td><a href='pageAdminGestionDelTomes?idSerieDel=$idSerie'>Supprimer</a></td>" ;
                 echo "<td><a href='pageAdminGestionTomes.php?idSerieAdd=$idSerie'>ajouter</a></td>" ;
                 echo "</tr>";
