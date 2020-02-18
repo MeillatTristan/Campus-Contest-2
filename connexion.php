@@ -29,7 +29,5 @@
 
     <input type="submit" value="Valider">
   </form>
-  <?php
-  ?>
 </body>
 </html>

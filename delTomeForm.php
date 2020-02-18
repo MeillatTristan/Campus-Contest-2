@@ -66,9 +66,7 @@ else{
       header("Location:pageAdmin.php");
     }
   }
-
 }
-
 ?>
 </body>
 </html>
