@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/bibliotheque.css" />
 	</head>
 	<body>
 
@@ -27,6 +28,8 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
+					<h2>En dévelloppement</h2>
+					<?php include "location.php"?>
 					</section>
 
 				<!-- Two -->
