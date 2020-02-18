@@ -3195,6 +3195,10 @@
 			text-align: center;
 		}
 
+		.navBar li{
+			margin-top: 5px;
+		}
+
 		a:link
 		{
 		text-decoration:none;

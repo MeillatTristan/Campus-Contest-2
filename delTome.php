@@ -7,6 +7,8 @@
   else{
     include 'configbdd.php';
 
+    //verif admin
+
     $idUsers =  $_SESSION['id'];
     $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
     if ($admin->fetch()[0] != 'y'){
@@ -14,12 +16,12 @@
 
     }
     else{
-      if (isset($_REQUEST['idTomeToDel'])){
+      if (isset($_REQUEST['idTomeToDel'])){ //si un tome à suppr à bien été passé en parametre
         $idTome = $_REQUEST['idTomeToDel'];
 
         $bdd->query("DELETE FROM tome WHERE id = $idTome");
       }
-      else{
+      else{ //sinon on modifie juste la colonne stock avec la nouvelle valeur
       $idTome = $_REQUEST['idTomeToDelStock'];
       $stockToDel = $_REQUEST['stockToDel'];
       $currentStock = $bdd->query("SELECT stock FROM tome WHERE id =".$idTome)->fetch()[0];

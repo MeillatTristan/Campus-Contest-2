@@ -7,7 +7,6 @@
         <title>Document</title>
     </head>
     <body>
-        
 <!-- page admin pour gerer les series -->
         <?php
             if(!isset($_SESSION['id'])){
@@ -38,7 +37,7 @@
                             </tr>
                         </thead>
                         <tbody>";
-                        while ( $serie = $series->fetch()){
+                        while ( $serie = $series->fetch()){ //on parcourt les series
                             $idSerie = $serie['id'];
                             $nbTome = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerie")->fetch()[0];
                             echo "<tr>";
@@ -46,7 +45,7 @@
                             echo "<td>". $serie['author']."</td>" ;
                             echo "<td>". $serie['releaseDate']."</td>" ;
                             echo "<td>". $nbTome."</td>" ;
-                            echo "<td><a href='pageAdminGestionDelTomes?idSerieDel=$idSerie'>Supprimer</a></td>" ;
+                            echo "<td><a href='pageAdminGestionDelTomes?idSerieDel=$idSerie'>Supprimer</a></td>" ; //lien pour suppr 
                             echo "<td><a href='pageAdminGestionTomes.php?idSerieAdd=$idSerie'>ajouter</a></td>" ;
                             echo "</tr>";
                         }

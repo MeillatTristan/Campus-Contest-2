@@ -39,10 +39,10 @@
           <?php
             include "configbdd.php";
             $locations = $bdd->query("SELECT * FROM locations");
-            while ($location = $locations->fetch()){
+            while ($location = $locations->fetch()){ //parcourt des toutes les locations
               $idCustomer = $location['customersID'];
               $customer = $bdd->query("SELECT * FROM users WHERE id = $idCustomer")->fetch();
-              if ($location['returnBool'] == 'n'){
+              if ($location['returnBool'] == 'n'){ //si cette location n'a pas encore été retourné
                 $idLocation = $location['id'];
                 $idLocationSerie = $location['serieID'];
                 $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
@@ -66,8 +66,9 @@
                     <td><?php echo $borrowingDate?> </td>
                     <td><?php echo $returnDate?> </td>
                     <?php
-                    echo "<td> <a href='retourLivre.php?idLocation=$idLocation'>livre rendu</a></td>";
+                    echo "<td> <a href='retourLivre.php?idLocation=$idLocation'>livre rendu</a></td>"; //lien pour retourner un livre
                     if (date("Y-m-d") > $returnDate){
+                      //lien pour envoyer un mail à l'emprunteur seulement si la date à été dépassé
                       echo "<td><a href='mailto:$mailCustomer?subject=Manga++ : retour livre&body=$textMail'>envoyer un mail au loueur</a></td>";
                     }
                   }
@@ -95,7 +96,7 @@
             while ($location = $locations->fetch()){
               $idCustomer = $location['customersID'];
               $customer = $bdd->query("SELECT * FROM users WHERE id = $idCustomer")->fetch();
-              if ($location['returnBool'] == 'y'){
+              if ($location['returnBool'] == 'y'){ //affichage de la location si le livre à été retourné
                 $idLocationSerie = $location['serieID'];
                 $nameSerie = $bdd->query("SELECT name FROM series WHERE id = $idLocationSerie")->fetch()[0];
                 $tome = $location['tome'];

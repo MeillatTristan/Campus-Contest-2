@@ -12,13 +12,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
+		<?php session_start() ?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration Gestion des Tomes</a></div>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="pageAdmin.php">Gestion utilisateurs</a></li>
-				<li><a href="pageAdminGestionSeries.php">Gestion des series</a></li>
-      			<li><a href="deconnexion.php">Déconnexion</a></li>
 			</header>
 
 		<!-- Main -->
@@ -28,7 +25,8 @@
 				<!-- One -->
 				<!-- page d'administration de suppression des tomes -->
 					<section id="one" class="wrapper style1">
-					<?php include 'delTomeForm.php'?>
+						<?php include 'header.php' ?>
+						<?php include 'delTomeForm.php'?>
 					</section>
 
 		<!-- Footer -->

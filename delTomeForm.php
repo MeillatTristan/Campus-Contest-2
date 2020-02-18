@@ -8,7 +8,6 @@
 </head>
 <body>
 <?php
-  session_start();
   //formulaire de suppression d'un tome
 
   if(!isset($_SESSION['id'])){

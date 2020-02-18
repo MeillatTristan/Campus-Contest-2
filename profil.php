@@ -20,8 +20,6 @@
 		<!-- Header -->
 		<header id="header">
 			<div class="logo"><a href="#">page profil</a></div>
-			<li><a href="index.php">Accueil</a></li>
-			<li><a href="deconnexion.php">Déconnexion</a></li>
 		</header>
 
 		<!-- Main -->
@@ -31,16 +29,12 @@
 			<!-- One -->
 			<!-- page profil utilisateur avec appel du script myAccount -->
 				<section id="one" class="wrapperStyle1">
-				<?php include 'myAccount.php' ?>
+					<?php include 'header.php' ?>
+					<?php include 'myAccount.php' ?>
+					<div class="biblioLink">
+						<a href="bibliotheque.php">Aller à la bibliothèque</a>
+					</div>
 				</section>
-			<!-- Three -->
-				<section id="three" class="wrapper">
-				</section>
-			</div>
-			<div class="biblioLink">
-				<a href="bibliotheque.php">Aller à la bibliothèque</a>
-			</div>
-		</section>
 
 		<!-- Footer -->
 		<footer id="footer">

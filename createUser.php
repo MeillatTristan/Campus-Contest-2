@@ -7,6 +7,8 @@
   $password = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
 
   include 'configbdd.php';
+
+  //insert dans la bdd les infos rentrer par l'utilisateur dans la table users
   $bdd->query("INSERT INTO users (name, firstname, email, number, password, admin) VALUES ('$name', '$firstname', '$mail', $phone, '$password', 'n')");
   header('Location: index.php');
 ?>

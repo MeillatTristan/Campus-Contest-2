@@ -19,6 +19,7 @@
       ?>
         <li><a href="bibliotheque.php">Bibliothèque</a></li>
         <li><a href="index.php">Accueil</a></li>
+        <li><a href="profil.php">Mon compte</a></li>
         <li><a href="deconnexion.php">Déconnexion</a></li>
       <?php
     }

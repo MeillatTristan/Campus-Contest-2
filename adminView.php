@@ -48,7 +48,7 @@
                         echo "<td>". $users['email']."</td>" ;
                         echo "<td>". $users['number']."</td>" ;
                         echo "<td>". $users['admin']."</td>" ;
-                        echo "<td><a href='usersListeDelete.php?idDel=".$users['id']."'>Supprimer</a></td>" ;
+                        echo "<td><a href='pageAdmin?idDel=".$users['id']."'>Supprimer</a></td>" ;
                         echo "<td><a href='profil.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
                         echo "</tr>";
                         }
