@@ -1,4 +1,5 @@
 <ul class="navBar">
+<!-- script appellé sur les pages pour apporter les fonctionnalitées de navigation et de déconnexion -->
   <?php
     include "configbdd.php";
     if(!isset($_SESSION['id'])){
@@ -16,10 +17,9 @@
         <?php
       }
       ?>
-      <li><a href="bibliotheque.php">Bibliothèque</a></li>
-      <li><a href="index.php">Accueil</a></li>
-      <li><a href="deconnexion.php">Déconnexion</a></li>
-
+        <li><a href="bibliotheque.php">Bibliothèque</a></li>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="deconnexion.php">Déconnexion</a></li>
       <?php
     }
   ?>

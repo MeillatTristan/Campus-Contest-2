@@ -7,6 +7,7 @@
     <title>Ajouter un tome</title>
   </head>
   <body>
+  <!-- Formulaire appellé pour ajouter un nouveau tome a une série -->
     <?php
       session_start();
         if(!isset($_SESSION['id'])){

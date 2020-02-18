@@ -7,6 +7,7 @@
   <title>inscription</title>
 </head>
 <body>
+<!-- formulaire appellé lors de l'inscription ou de la modification des infos -->
   <?php
     if(isset($_SESSION['id'])){
       header('Location: index.php');

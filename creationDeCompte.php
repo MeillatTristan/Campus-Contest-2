@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Caminar by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Mangas ++</title>
@@ -12,37 +7,28 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-			<?php
-			session_start();
-			?>
+		<?php
+		session_start();
+		?>
+	<!-- Header -->
+		<header id="header">
+			<div class="logo"><a href="#">Mangas ++</a></div>
+		</header>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="#">Mangas ++</a></div>
-			</header>
+	<!-- Main -->
+		<section id="main">
+			<div class="inner">
 
-		<!-- Main -->
-			<section id="main">
-				<div class="inner">
+			<!-- One -->
+			<!-- page de creation de compte avec appel du formulaire d'inscription -->
+				<section id="one" class="wrapper style1">
+				<?php include 'inscription.php'?>
+				</section>
+			</div>
+		</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1">
-					<?php include 'inscription.php'?>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style2">
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-
-				</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-			</footer>
+	<!-- Footer -->
+		<footer id="footer">
+		</footer>
 	</body>
 </html>

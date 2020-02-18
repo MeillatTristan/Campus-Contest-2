@@ -23,6 +23,7 @@
 				<div class="inner">
 
 				<!-- One -->
+				<!-- page d'administration de gestion des series et d'ajout des series -->
 					<section id="one" class="wrapper style1">
 						<?php include "header.php" ?>
 					<?php include 'gestionSeries.php'?>

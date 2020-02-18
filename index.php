@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Caminar by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+<!-- page d'accueil du site  -->
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -31,6 +27,7 @@
 						<header class="special">
 							<h2>LOUEZ VOS MANGA</h2>
 							<p>et à petit prix !</p>
+							<!-- appel du header pour le menu de connexion -->
 							<p><?php include 'header.php' ?></p>
 
 						</header>

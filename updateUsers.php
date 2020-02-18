@@ -1,4 +1,5 @@
 <?php
+//script de modification des infos uniquement si vous etes administrateur
   $id = $_REQUEST['userIdModif'];
   $name = $_REQUEST['user_name'];
   $firstname = $_REQUEST['user_firstname'];

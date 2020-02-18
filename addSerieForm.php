@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+  <!-- Formulaire appeller pour ajouter une nouvelle série -->
     <?php
       if(!isset($_SESSION['id'])){ //si pas connecté ou pas admin
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
