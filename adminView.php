@@ -25,7 +25,6 @@
                     $bdd->query("DELETE FROM users WHERE id = $idDel");
                 }
 
-<<<<<<< HEAD
                 $requete = $bdd->query('SELECT * FROM users');
                 echo "
                 <h3>Utilisateurs :</h3>
@@ -55,33 +54,6 @@
                     echo"
                     </tbody>
                 </table>";
-=======
-        $requete = $bdd->query('SELECT * FROM users');
-        echo "
-        <h4>Utilisateurs :</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prénom</th>
-                    <th>Mail</th>
-                    <th>Numéro</th>
-                    <th>Admin</th>
-                </tr>
-            </thead>
-            <tbody class='tableau'>";
-            while ( $users = $requete->fetch()){
-                $admin = $bdd->query("SELECT admin FROM users WHERE id = ".$users['id'] );
-                echo "<tr>";
-                echo "<td>". $users['name']."</td>" ;
-                echo "<td>". $users['firstname']."</td>" ;
-                echo "<td>". $users['email']."</td>" ;
-                echo "<td>". $users['number']."</td>" ;
-                echo "<td>". $users['admin']."</td>" ;
-                echo "<td><a href='usersListeDelete.php?idDel=".$users['id']."'>Supprimer</a></td>" ;
-                echo "<td><a href='profil.php?idMaj=".$users['id']."'>Modifier</a></td>" ;
-                echo "</tr>";
->>>>>>> 5852d10aedb6dd10a6b18090cafc12d36942861e
             }
         ?>
         <div class="series">
