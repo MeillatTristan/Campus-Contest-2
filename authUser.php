@@ -15,22 +15,22 @@
     echo 'Mauvais email ou mot de passe !';
   }
 
-else{
-  if ($isPasswordCorrect) {
-      session_start();
-      $_SESSION['id'] = $resultat['id'];
-      $idUsers =  $_SESSION['id'];
-      $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
-      if ($admin->fetch()[0] != 'y'){
-        header("Location: profil.php");
+  else{
+    if ($isPasswordCorrect) {
+        session_start();
+        $_SESSION['id'] = $resultat['id'];
+        $idUsers =  $_SESSION['id'];
+        $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
+        if ($admin->fetch()[0] != 'y'){
+          header("Location: profil.php");
 
-      }
-      else {
-        header("Location: pageAdmin.php");
-      }
+        }
+        else {
+          header("Location: pageAdmin.php");
+        }
+    }
+    else {
+        echo 'Mauvais identifiant ou mot de passe !';
+    }
   }
-  else {
-      echo 'Mauvais identifiant ou mot de passe !';
-  }
-}
 ?>
