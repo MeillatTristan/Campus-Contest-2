@@ -25,21 +25,11 @@
 		<!-- Main -->
 			<section id="main">
 				<div class="inner">
-
 				<!-- One -->
 					<section id="one" class="wrapper style1">
 					<h2>En dévelloppement</h2>
 					<?php include "location.php"?>
 					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper style2">
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper">
-					</section>
-
 				</div>
 			</section>
 

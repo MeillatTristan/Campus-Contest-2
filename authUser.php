@@ -11,28 +11,26 @@
 
   $isPasswordCorrect = password_verify($password, $resultat['password']);
 
-  if (!$resultat)
-{
+  if (!$resultat){
     echo 'Mauvais email ou mot de passe !';
-}
+  }
 
 else{
-    if ($isPasswordCorrect) {
-        session_start();
-        $_SESSION['id'] = $resultat['id'];
-        $idUsers =  $_SESSION['id'];
-        $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
-        if ($admin->fetch()[0] != 'y'){
-          header("Location: profil.php");
+  if ($isPasswordCorrect) {
+      session_start();
+      $_SESSION['id'] = $resultat['id'];
+      $idUsers =  $_SESSION['id'];
+      $admin = $bdd->query("SELECT admin FROM users WHERE id = $idUsers" );
+      if ($admin->fetch()[0] != 'y'){
+        header("Location: profil.php");
 
-        }
-        else {
-          header("Location: pageAdmin.php");
-        }
-
-    }
-    else {
-        echo 'Mauvais identifiant ou mot de passe !';
-    }
+      }
+      else {
+        header("Location: pageAdmin.php");
+      }
+  }
+  else {
+      echo 'Mauvais identifiant ou mot de passe !';
+  }
 }
 ?>
