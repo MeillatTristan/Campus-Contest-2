@@ -1,10 +1,11 @@
 .tailleChamps {
-    width: 21%;
+    width: 26%;
     text-align: center;
 }
 
 .conteneurSerie {
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 

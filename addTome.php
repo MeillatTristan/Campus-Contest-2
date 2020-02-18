@@ -9,7 +9,7 @@
   <body>
     <?php
       session_start();
-      if(!isset($_SESSION['id'])){
+      if(!isset($_SESSION['id'])){ //verif user admin
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
       }
       else{
@@ -20,11 +20,11 @@
         if ($admin->fetch()[0] != 'y'){
           echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
         }
-        else{
+        else{ //si admin execute le code
           $idSerieToAdd = $_REQUEST['idSerieToAdd'];
           $tomeNb = $_REQUEST['tomeNb'];
           $stockToAdd = $_REQUEST['stock'];
-          $tomeExist = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerieToAdd AND tome = $tomeNb")->fetch()[0];
+          $tomeExist = $bdd->query("SELECT COUNT(*) FROM tome WHERE serieID = $idSerieToAdd AND tome = $tomeNb")->fetch()[0]; //nb de tome 
           if ($tomeExist > 0){
             echo "<p>Ce tome existe déjà</p>";
           }

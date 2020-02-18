@@ -8,7 +8,7 @@
   </head>
   <body>
     <?php
-      if(!isset($_SESSION['id'])){
+      if(!isset($_SESSION['id'])){ //si pas connecté ou pas admin
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
       }
       else{
@@ -19,9 +19,10 @@
         if ($admin->fetch()[0] != 'y'){
           echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
         }
-        else{
+        else{ //sinon on execute le code de la page
           echo "<h2>ajouter une nouvelle série</h2>";
           ?>
+          <!-- formulaire d'ajout d'une série -->
           <form action="addSerie.php" method="post">
 
             <label for="name">Titre :</label>
