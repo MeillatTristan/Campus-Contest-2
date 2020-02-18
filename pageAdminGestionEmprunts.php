@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-		<?php session_start(); ?>
+		<?php session_start();?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Gestion des emprunts</a></div>

@@ -25,7 +25,7 @@
       $bdd->query($updateRequest);
 
       $bdd->query("INSERT INTO locations (tome, customersID, borrowingDate, returnDate,serieID) VALUES ('$tome', '$idCustomers', '$borrowingDate', '$returnDate', '$idSerie')");
-      echo "<p>le tome à bien été loué</p>";
+      header("Location:bibliotheque.php");
 
     }
     else{
