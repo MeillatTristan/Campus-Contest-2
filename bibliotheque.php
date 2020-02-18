@@ -13,14 +13,8 @@
 		<link rel="stylesheet" href="assets/css/bibliotheque.css" />
 	</head>
 	<body>
-
+	<?php session_start(); ?>
 		<!-- Header -->
-			<header id="header">
-				<div class="logo"><a href="#">Mangas++</a></div>
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="profil.php">Retour page Profil</a></li>
-				<li><a href="deconnexion.php">Déconnexion</a></li>
-			</header>
 
 		<!-- Main -->
 			<section id="main">
@@ -28,7 +22,8 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-					<h2>En dévelloppement</h2>
+					<h3>Bibliothèque : location</h3>
+					<p> <?php include "header.php"?> </p>
 					<?php include "location.php"?>
 					</section>
 

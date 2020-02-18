@@ -9,6 +9,9 @@
 <body>
 <?php
   session_start();
+  if (!isset($_REQUEST['name']) || !isset($_REQUEST['auteur']) || !isset($_REQUEST['releaseDate'])){
+    header("Location:index.php");
+  }
   if(!isset($_SESSION['id'])){
     echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
   }
@@ -28,9 +31,12 @@
       $tomeExist = $bdd->query("SELECT COUNT(*) FROM series WHERE name = '$nameSerie' AND author = '$auteurSerie'")->fetch()[0];
       if ($tomeExist > 0){
         echo "<p>Cette série est déjà dans la base de donnée</p>";
+        header("Location:pageAdmin.php");
       }
       else{
         $bdd->query("INSERT INTO series SET name = '$nameSerie', author = '$auteurSerie', releaseDate = '$releaseDate'");
+        header("Location:pageAdmin.php");
+
       }
     }
   }

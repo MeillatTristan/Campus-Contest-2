@@ -16,7 +16,6 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="#">Administration</a></div>
-				<?php include "header.php" ?>
 			</header>
 
 		<!-- Main -->
@@ -25,6 +24,8 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
+						<h3>Page Admin</h3>
+						<p><?php include "header.php" ?></p>
 						<?php include 'adminView.php'?>
 					</section>
 				<!-- Three -->

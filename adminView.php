@@ -28,7 +28,7 @@
 
         $requete = $bdd->query('SELECT * FROM users');
         echo "
-        <h3>Utilisateurs :</h3>
+        <h4>Utilisateurs :</h4>
         <table>
             <thead>
                 <tr>
