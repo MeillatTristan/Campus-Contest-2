@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo "yo";
 if(!isset($_SESSION['id'])){
     echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
 }
@@ -16,7 +16,7 @@ else{
   else{
     $idLocation = $_REQUEST['idLocation'];
     $bdd->query("UPDATE locations SET returnBool = 'y' WHERE id = $idLocation");
-    header("Location:empruntsView.php");
+    header("Location:pageAdminGestionEmprunts.php");
   }
 }
 ?>

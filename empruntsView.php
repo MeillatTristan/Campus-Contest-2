@@ -79,7 +79,7 @@ else{
     }
     echo "</table>"
     ?>
-    <h3>Les emprunts en cours</h3>
+    <h3>Les emprunts terminé</h3>
     <table>
       <thead>
         <td>Emprunteur</td>
@@ -103,7 +103,13 @@ else{
           $returnDate = $location['returnDate'];
           ?>
             <tr>
-              <td> <?php echo $customer['name']." ".$customer['firstname'] ?> </td>
+              <td> <?php
+              if (isset($idCustomer)){
+                echo $customer['name']." ".$customer['firstname'];
+              }
+              else{
+                echo "compte supprimé";
+              } ?> </td>
               <td><?php echo $nameSerie?> </td>
               <td><?php echo $tome?> </td>
               <td><?php echo $borrowingDate?> </td>
