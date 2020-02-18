@@ -1,0 +1,8 @@
+.tailleChamps {
+    width: 20%;
+}
+
+.conteneurSerie {
+    display:flex;
+    justify-content: space-around;
+}
