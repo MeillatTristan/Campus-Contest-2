@@ -41,6 +41,7 @@
             }
           ?>
           </select>
+          <input type='submit' value='louer'>
         </form>
         </div>
         <?php
