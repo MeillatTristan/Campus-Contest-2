@@ -28,7 +28,7 @@
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
-					<h2>En dévelloppement</h2>
+					<h2>En développement</h2>
 					<?php include "location.php"?>
 					</section>
 
