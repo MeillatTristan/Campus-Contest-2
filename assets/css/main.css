@@ -3192,11 +3192,24 @@
 		.navBar{
 			list-style: none;
 			margin-top: 20px;
-			text-align: center;
+			display: flex;
+			justify-content: space-around;
 		}
 
 		.navBar li{
-			margin-top: 5px;
+			padding : 20px;
+		}
+
+		.navBar li a{
+			font-size: 18px;
+			padding : 20px;
+		}
+
+		.navBar li a:hover{
+			transition: 0.5s;
+			font-size: 18px;
+			background-color: #2d708d;
+			border-radius: 5px;
 		}
 
 		a:link
