@@ -3201,15 +3201,14 @@
 		}
 
 		.navBar li a{
-			font-size: 18px;
+			font-size: 20px;
 			padding : 20px;
 		}
 
 		.navBar li a:hover{
-			transition: 0.5s;
-			font-size: 18px;
-			background-color: #2d708d;
-			border-radius: 5px;
+			transition: 0.8s;
+			color: #2d708d;
+			opacity: 0.7;
 		}
 
 		a:link
