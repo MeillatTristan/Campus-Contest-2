@@ -20,6 +20,9 @@
         $countTome = $bdd->query("SELECT COUNT(id) FROM tome WHERE serieID = $idSerie");
         $nbTome = $countTome->fetch()[0]; //nb de tome
         echo "<h3>".$serie['name']."</h3>";
+        if ($serie['picture'] == 'none'){
+          echo "<img src='assets/image/noImage.jpg>";
+        }
         echo "
         <form method='get' action='reservation.php'>
         <input type='hidden' name='serie' value= '$idSerie'> </input>
