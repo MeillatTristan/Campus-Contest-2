@@ -9,8 +9,6 @@
 	</head>
 	<body>
 	<?php session_start(); ?>
-		<!-- Header -->
-
 		<!-- Main -->
 			<section id="main">
 				<div class="inner">

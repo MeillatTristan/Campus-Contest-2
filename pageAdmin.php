@@ -26,6 +26,7 @@
 				<!-- page d'administration du site avec appelle du header et du script adminView -->
 					<section id="one" class="wrapper style1">
 						<h3>Page Admin</h3>
+						<?php include 'header.php' ?>
 						<?php include 'adminView.php'?>
 					</section>
 
