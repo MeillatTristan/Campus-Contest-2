@@ -22,7 +22,7 @@
           echo "<img src='assets/image/noImage.jpg'>";
         }
         else{
-          echo "<img src='assets/image/$imgSerie'>";
+          echo "<img src='https://media.senscritique.com/media/000015702798/source_big/One_Piece.jpg'>";
         }
         $tomes = $bdd->query("SELECT * from tome WHERE serieID = $idSerie");
         ?>

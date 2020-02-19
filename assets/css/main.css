@@ -3165,12 +3165,9 @@
 		text-align: center;
 	}
 
-		#footer a {
-			color: rgba(255, 255, 255, 0.75);
-		}
-
 			#footer a:hover {
-				color: #FFF;
+				color: #2d708d;
+				transition: 0.3s;
 			}
 
 		#footer .copyright {
