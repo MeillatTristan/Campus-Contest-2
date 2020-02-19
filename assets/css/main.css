@@ -3206,6 +3206,13 @@
 
 		}
 
+		.tomeExist{
+			color : #dd1d25;
+			opacity: 0.8;
+			text-align: center;
+			font-size: 18px;
+		}
+
 		.navBar{
 			list-style: none;
 			margin-top: 20px;

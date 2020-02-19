@@ -9,7 +9,7 @@
   <body>
   <!-- script appeller pour ajouter un tome -->
     <?php
-      session_start();
+    session_start();
       if(!isset($_SESSION['id'])){ //verif user admin
         echo "veuillez vous connectez en tant qu'admin pour accéder à cette page";
       }

@@ -26,6 +26,11 @@
 				<!-- page d'administration de gestion des series et d'ajout des series -->
 					<section id="one" class="wrapper style1">
 						<?php include "header.php" ?>
+						<p class="tomeExist"><?php
+						if(isset($_REQUEST['tomeExist'])){
+							echo "La série est déjà enregistré";
+						}
+						?></p>
 					<?php include 'gestionSeries.php'?>
 					<?php include 'addSerieForm.php'?>
 

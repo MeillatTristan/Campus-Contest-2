@@ -23,7 +23,8 @@
           echo "<div class='imgSerie'><img src='assets/image/noImage.jpg'></div>";
         }
         else{
-          echo "<div class='imgSerie'><img src='https://media.senscritique.com/media/000015702798/source_big/One_Piece.jpg'> </div>";
+          $picture = $bdd->query("SELECT picture FROM series WHERE id = $idSerie")->fetch()[0];
+          echo "<div class='imgSerie'><img src='assets/image/$picture'> </div>";
         }
         $tomes = $bdd->query("SELECT * from tome WHERE serieID = $idSerie");
         ?>

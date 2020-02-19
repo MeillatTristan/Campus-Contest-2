@@ -24,7 +24,7 @@
           echo "<h2>ajouter une nouvelle série</h2>";
           ?>
           <!-- formulaire d'ajout d'une série -->
-          <form action="addSerie.php" method="post">
+          <form action="addSerie.php" method="post" enctype="multipart/form-data">
 
             <label for="name">Titre :</label>
             <input type="text" id="name" name="name" minlength="2" required>
@@ -34,6 +34,9 @@
 
             <label for="ReleaseDate"> Date de parution :</label>
             <input type="date" id="ReleaseDate" name="releaseDate" required>
+
+            <label for="picture"> Couverture De la Série :</label>
+            <input type="file" id="pictureSerie" name="pictureSerie" required>
 
             <input type="submit" value="Valider">
           </form>
