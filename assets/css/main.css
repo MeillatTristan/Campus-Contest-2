@@ -3121,6 +3121,19 @@
 
 		}
 
+	.email{
+		margin :0 0 0 0;
+	}
+
+	form{
+		padding: 10px;
+	}
+
+	.badEmail{
+		color : #dd1d25;
+		opacity: 0.8;
+	}
+
 	.wrapper.style2 {
 		background: #1e1f23;
 		padding: 6rem;
@@ -3158,6 +3171,11 @@
 			}
 
 
+		}
+
+		.imgSerie{
+			width: 130px;
+			height: 200px;
 		}
 
 /* Footer */
@@ -3233,20 +3251,11 @@
 
 			li a{
 				font-size: 12px;
+				padding: 0px;
 			}
 
 			#footer .copyright{
 				font-size: 12px;
 			}
 
-			li .icon{
-				font-size: 12px;
-			}
-
-		}
-
-		@media screen and (max-width: 986px){
-			.wrapper .style1{
-				
-			}
 		}

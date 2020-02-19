@@ -19,10 +19,11 @@
         echo "<h4>".$serie['name']."</h4>";
         $imgSerie = $serie['picture'];
         if ( $imgSerie == 'none'){
-          echo "<img src='assets/image/noImage.jpg'>";
+
+          echo "<div class='imgSerie'><img src='assets/image/noImage.jpg'></div>";
         }
         else{
-          echo "<img src='https://media.senscritique.com/media/000015702798/source_big/One_Piece.jpg'>";
+          echo "<div class='imgSerie'><img src='https://media.senscritique.com/media/000015702798/source_big/One_Piece.jpg'> </div>";
         }
         $tomes = $bdd->query("SELECT * from tome WHERE serieID = $idSerie");
         ?>

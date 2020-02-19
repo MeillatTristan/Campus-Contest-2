@@ -21,7 +21,13 @@
     <label for="firstname">Prénom :</label>
     <input type="text" id="firstname" name="user_firstname" minlength="2" required>
 
-    <label for="mail">e-mail :</label>
+    <label class="mail" for="mail">e-mail :</label>
+    <?php
+    if (isset($_REQUEST['badEmail'])){
+      echo "<label class='badEmail'>email déjà utilisé</label>";
+    }
+
+    ?>
     <input type="email" id="mail" name="user_mail" minlength="2" required>
 
     <label for="phone">Numéro de téléphone :</label>

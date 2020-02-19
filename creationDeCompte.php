@@ -22,6 +22,7 @@
 			<!-- One -->
 			<!-- page de creation de compte avec appel du formulaire d'inscription -->
 				<section id="one" class="wrapper style1">
+				<?php include 'header.php' ?>
 				<?php include 'inscription.php'?>
 				</section>
 			</div>
